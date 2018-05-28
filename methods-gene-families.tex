@@ -120,11 +120,11 @@
 	\section{Tree based family scoring}
 	Family trees are largely expected to follow the pattern of evolution from the species tree. This equivalence between gene trees and species has been used previously in multiple methods like TreeFam, LOFT, SYNERGY, ENSEMBLE 2007, PhIGs (Li et. al.; Van der Heijden et. al.; Wapinski et. al.; Hubbard et. al.; Dehal et. al.) for building gene families and detection of orthologs and paralogs from the family trees. Animal gene families in TreeFam are the group of genes evolved from a single gene in last common of all animals. Genes in one family are identified on the basis that they are phylogenetically separated by one or more genes from the outgroup species (S. cerevisiae, S pombe. or A. thaliana)
 	
-	Since gene families contain sequences that have diverged at or after the divergence of the earliest diverging species under study, genes within families have also diverged after the divergence of outgroup species. This evolutionary property of gene family can be used to score family trees by calculating the proportion of ingroup sequence pair that appear to have diverged after the divergence of outgroup sequences in the corresponding evolutionary trees of the families.
+	Since gene families contain sequences that have diverged at or after the divergence of the earliest diverging species under study, genes within families have also diverged after the divergence of outgroup species. This evolutionary property of gene family can be used to score family trees by calculating the proportion of ingroup sequence pairs that appear to have diverged after the divergence of outgroup sequences in the corresponding evolutionary trees of the families.
 		\subsection{Methods}
 		For a given rooted family tree, each pair of ingroup sequences, found within the tree, is labeled as True Positive (TP) or False Positive (FP) depending upon whether the pair appears to have diverged after or before the divergence of one or more outgroup sequences. A precision score for the family is calculated  as TP/(TP+FP) which gives the proportion of ingroup pairs diverging after the outgroup separation in the family tree.
 		
-		To check the divergence of any ingroup sequence pair in the tree, the MRCA of the pair is obtained. Then, all sequences corresponding to leaf nodes under this MRCA are collected. If this set of sequences contains one or more outgroup sequences, the corresponding ingroup pair is labelled as FP, else it is labelled as TP.
+		To check the divergence of any ingroup sequence pair in the tree, the MRCA of the pair is obtained. Then, all sequences corresponding to leaf nodes under this MRCA are collected. If this set of sequences contains one or more outgroup sequences, the corresponding ingroup pair is labelled as FP, else it is labeled as TP.
 		
 		\subsection{Preliminary results}
 		This scoring method was applied on 18543 legume families. The histogram (figure:~\ref{fig:hist_tree_precision_scores_lgf5}) shows the distribution of scores across the legume families. Most of the families have higher precision scores (>0.75).
@@ -148,25 +148,25 @@
 		
 		
 		\subsection{Future work}
-		Over-clustered legume families detected using this method will be corrected to obtain a set of high-quality legume families. Also, large families with low precision scores will be re-rooted to maximise the precision scores.
+		Over-clustered legume families detected using this method will be corrected to obtain a set of high-quality legume families. Also, large families with low precision scores will be re-rooted to maximize the precision scores.
 		
-		The merged families obtained using the pair based scoring will also be analysed using the tree based scoring to resolve any over-clustered families produced due to merging.
+		The merged families obtained using the pair based scoring will also be analyzed using the tree based scoring to resolve any over-clustered families produced due to merging.
 		
-		An R-package will be developed where users can analyse and score family trees with respect to a given set of outgroups. The R-package will also be able to extract ingroup clades from over-clustered families.
+		An R-package will be developed where users can analyze and score family trees with respect to a given set of outgroups. The R-package will also be able to directly extract ingroup clades from over-clustered families.
 		
 	\section{Domain composition based family scoring}
 	Protein domains are sections of protein sequences that can fold and function independently. Consequently, multidomain proteins can evolve in a modular fashion through domain deletions/insertions/duplication in addition to sequence-based evolution. Databases like Pfam, PROSITE, SMART, CDD (Finn et. al.; Falquet et. al.; Letunic et. al.; Marchler-Bauer et. al.) define and store domains detected in large number of protein sequences. Domain compositions/content have been previously used to detect sequence homology with high accuracies. (Song et. al, Bitard-Feildel et. al). However, these were well separated gene families with distinctly different domain compositions (E.g. families separated at metazoan ancestor)
 	
-	Closely related sequences from the same family can be expected to have fairly same domain types and domain content. Accordingly, this method assigns scores to the given family based on number of domains shared between the sequences of the family. This scoring scheme will assign higher scores to family where most of the sequences have similar domain compositions. Good and well-conserved families are expected to have higher domain composition scores. Conversely, over-clustered families containing diverse sequences are expected to have lower scores due to less conservation of domain compositions across all the sequences.
+	Closely related sequences from the same family can be expected to have fairly same domain types and domain content. Accordingly, this method assigns scores to given families based on number of domains shared between the sequences of the family. This scoring scheme will assign higher scores to family where most of the sequences have similar domain compositions. Good and well-conserved families are expected to have higher domain composition scores. Conversely, over-clustered families containing diverse sequences are expected to have lower scores due to less conservation of domain compositions across all the sequences.
 	
 	\subsection{Methods}
 		\subsubsection{Domain composition based jaccard score}
-		For a given family, Pfam-A domains are assigned to all the sequences in the family using the pfamscan program (Mistry et. al.) The domains are assigned  to sequences in order of their start coordinates in the sequences. Then, for each pair of sequences in family, domain composition based jaccard score is calculated using the function: (n1 union n2)/(n1 intersection n2), where n1 is the set unique domains and n2 is the set unique domains from sequence 1 and 2 of the pair, respectively. Jaccard score for the family is calculated as mean of all pairwise jaccard scores from the family.
+		For a given family, Pfam-A domains are assigned to all the sequences in the family using the pfamscan program (Mistry et. al.) The domains are assigned  to sequences in order of their start coordinates in the sequences. Then, for each pair of sequences in family, domain composition based jaccard score is calculated using the function: $(n1 \cup  n2)/(n1 \cap n2)$, where n1 and n2 are the sets unique domains from sequence 1 and 2 of the pair, respectively. Jaccard score for the family is calculated as mean of all pairwise jaccard scores from the family.
 		
 		\subsubsection{Domain feature vector based cosine score}
-		Here, the domain compositions of sequences within a family are compared using their domain feature vectors. This is new scoring method for comparing domain compositions of two sequences. For example, consider 2 sequences X and Y from the same family having following domain order along the sequence, X: \{A,B,B,C\} and Y: \{A,A,B,D\}. The duplicate domains in both the sequences are assigned unique ids to distinguish them from each other, X: \{A, B, B-2, C\} and Y:\{A, A-2, B, D\}. The domain content universe for both the sequences is (A, A-2, B, B-2, C, D). Accordingly, the domain feature vector for both sequences is X: (x1, 0, x2, x3, x4, 0) and Y: (y1, y2, y3, 0, 0, y4), where xi and yi are the alignment scores for the corresponding domain HMMs aligning against the sequences X and Y, respectively. Cosine similarities are calculated between all pairs of sequences using their domain feature vectors and the domain composition score for the family is calculated as the mean of all pairwise cosine scores.
+		Here, the domain compositions of sequences within a given family are compared using their domain feature vectors. This is new scoring method for comparing domain compositions of two sequences. For example, consider 2 sequences X and Y from the same family having following domain order along the sequence, X: \{A,B,B,C\} and Y: \{A,A,B,D\}. The duplicate domains in both the sequences are assigned unique ids to distinguish them from each other, X: \{A, B, B-2, C\} and Y:\{A, A-2, B, D\}. The domain content universe for both the sequences is (A, A-2, B, B-2, C, D). Accordingly, the domain feature vector for both sequences is X: (x1, 0, x2, x3, x4, 0) and Y: (y1, y2, y3, 0, 0, y4), where xi and yi are the alignment scores for the corresponding domain HMMs aligning against the sequences X and Y, respectively. Cosine similarities are calculated between all pairs of sequences using their domain feature vectors and the domain composition score for the family is calculated as the mean of all pairwise cosine scores.
 		
-		Pfam clusters closely related domains in Pfam-A into clans. For sequences within the same family, closely related domains could be interchangeably detected for same positions in closely related family sequences. To avoid this, clan-ids of the domains are used instead of domain-ids for calculating the domain feature vector based cosine scores.
+		Pfam clusters closely related domains in Pfam-A into clans. For sequences within the same family, closely related domains could be  detected interchangeably, for same positions, in closely related family sequences. To avoid this, clan-ids of the domains are used instead of domain-ids for calculating the domain feature vector based cosine scores.
 		
 		\subsubsection{Preliminary results}
 		The domain composition based jaccard and cosine scoring were applied on the existing legume families to study the relationships between different scores and the ingroup sequence count. The score distributions for domain-based jaccard scores can be seen from figure:~\ref{fig:hist_domain_jaccard_scores_lgf5}
@@ -193,7 +193,7 @@
 			\label{fig:hist_domain_cosine_scores_lgf5}
 		\end{figure}
 		
-		The scatter-plot (figure:~\ref{fig:scatter_domain_cosine_vs_seq_ct_lgf5}) showing the relationship between the cosine score and family size was also obtained to study the relationship between cosine score and number of ingroup sequences in the family. The scores correlate well with family sizes, with higher scores for families with number of ingroup sequences between 15-45.
+		The scatter-plot (figure:~\ref{fig:scatter_domain_cosine_vs_seq_ct_lgf5}) showing the relationship between the cosine score and family size was also obtained to study the relationship between cosine score and number of ingroup sequences in the family. Here too, the scores correlate well with family sizes, with higher scores for families with number of ingroup sequences between 15-45.
 		
 		\begin{figure}
 			\fbox{\includegraphics[width=\linewidth]{figures/scatter_domain_cosine_vs_seq_ct_lgf5.png}}
@@ -212,7 +212,7 @@
 		Both the domain based family scoring methods have been developed into a PYTHON tool that accepts directory containing family fasta files and the Pfam database, to assign domain composition scores to families.
 	
 	\subsection{Significance}
-	Here we explore a different domain based family scores mainly to detect over-clustering in families. Assuming that the species under study are closely related, the domain compositions for all the sequences in the family are expected to be largely conserved. The domain feature vector based cosine score seems to correlate better with family size and the tree based precision score as compared to the jaccard score.
+	Here we explore different domain based family scores mainly to detect over-clustering in families. Assuming that the species under study are closely related, the domain compositions for all the sequences in the family are expected to be largely conserved. The domain feature vector based cosine score seems to correlate better with family size and the tree based precision score as compared to the jaccard score.
 	
 	The domain based scoring method can be used to detect candidate over-clustered families in conjunction with the tree based precision scores. This scoring method can also help in detecting rapidly evolving families.
 	
@@ -223,27 +223,26 @@
 	
 
 	\section{Building high-quality consensus set of families by comparing family sets}
-	Well-defined families can be detected consistently by multiple family building methods.  
-	This workflow involves comparing the 2 sets of families, obtained from 2 different family building approaches, to establish family correspondences between the 2 sets i.e. which family from one set best corresponds to which family from the second set. Degrees of overlaps between corresponding families between the two sets can be used as measure of family consistency.
+	Well-defined families can be detected consistently by multiple family building methods. This workflow involves comparing the 2 sets of families, obtained from 2 different family building approaches, to establish family correspondences between the 2 sets i.e. which family from one set best corresponds to which family from the second set. Degrees of overlaps between corresponding families, between the two sets, can be used as measure of family consistency.
 	
 	This workflow is used to compare set of Ks-based legume families to a set of families obtained from OrthoFinder, to obtain a set of high-quality consensus families. OrthoFinder is one of the latest family building methods that is proven to beat popular family construction methods including OrthoMCL. The two sets are compared through their respective family HMM sets.
 	
 		\subsection{Methods}
 			\subsubsection{Building HMM sets for families}
-			Gene families are built using the OrthoFinder algorithm from 11 legume proteomes with 2 outgroup proteomes. Similarly, legume families are also built using in-house Ks-based family building algorithm on 14 legume proteomes with 4 outgroup proteomes. Two family HMM sets are obtained from both the sets of families using the hmmbuild program from the HMMER package.
+			Gene families are built using the OrthoFinder algorithm from 11 legume proteomes with 2 outgroup proteomes. Similarly, legume families are also built using in-house Ks-based family building algorithm, from 14 legume proteomes with 4 outgroup proteomes. Two family HMM sets are obtained from both the sets of families using the hmmbuild program from the HMMER package.
 			
 			\subsubsection{Classifying common set of proteomes into families using HMM sets}
-			A common set of 11 legumes proteomes with 2 outgroup proteomes are classified into both the family HMM sets using best matching family HMM strategy. Both HMM sets are searched against the common set of proteomes using hmmscan program from HMMER package. Each sequence is classified into any one family, from both the sets, for which the sequence aligns best (evalue>=1e-5) with the corresponding family HMM.
+			A common set of 11 legumes proteomes with 2 outgroup proteomes are classified into both the family HMM sets using best matching family HMM strategy. Both HMM sets are searched against the common set of proteomes, using the hmmscan program from HMMER package. Each sequence is classified into any one family, from both the sets, for which the sequence aligns best (e-value>=1e-5) with the corresponding family HMM.
 			
 			\subsubsection{Calculating family correspondence and family overlaps between the sets}
-			For each family in both the sets, largest overlapping family in opposite set  is obtained. If, for example, fam1 from set1 is the largest overlapping family for fam2 from set2 and vice-versa, then fam1 and fam2 are considered corresponding families from both the sets. The two overlap scores, fam1-fam2 overlap and fam2-fam1 overlap are also calculated where fam1-fam2 overlap score is the proportion of sequences in fam1 that overlap with fam2 and, similarly, fam2-fam1 overlap score is the proportion of sequences in fam2 that overlap with fam1. If both the scores are 1.0 for a pair of families then the two families match exactly from the two sets.
+			For each family in both the sets, largest overlapping family in opposite set  is obtained. If, for example, fam1 from set1 is the largest overlapping family for fam2 from set2 and vice-versa, then fam1 and fam2 are considered corresponding families from both the sets. The two overlap scores, fam1-fam2 overlap and fam2-fam1 overlap are also calculated where fam1-fam2 overlap score is the proportion of sequences in fam1 that overlap with fam2 and, similarly, fam2-fam1 overlap score is the proportion of sequences in fam2 that overlap with fam1. If both the scores are 1.0, for a pair of families, then the two families match exactly from the two sets.
 			
 		\subsection{Preliminary results}
 		The Ks-based and OrthoFinder legume family sets were compared using the family comparison workflow to explore the family correspondence between the two sets.
 		
 		Nine thousand one hundred sixty families were found to match exactly between both the sets (both overlap scores = 1.0). Eleven thousand five hundred fifty three families were found to match with more than 0.9 overlap score between both sets and 12934 families were found to match more that 0.8 overlap score.
 		
-		Both the overlap scores for each corresponding family pair from both the sets were plotted against each other (figure:~\ref{fig:scatter_lgf5_vs_orthofinder_overlap_lgf5}).
+		Both the overlap scores for each corresponding family pair from both the sets were plotted against each other (figure:~\ref{fig:scatter_lgf5_vs_orthofinder_overlap_lgf5}). The families near the bottom right of the plot, on the y-axis, are those where the lgf5 family lies entirely within the corresponding orthofinder family. Similarly, the families near top left of the plot, on the x-axis,  are those families where the orthofinder family lies entirely within the corresponding lgf5 family.
 		  
 		\begin{figure}[h!]
 			\fbox{\includegraphics[width=\linewidth]{figures/scatter_lgf5_vs_orthofinder_overlap_lgf5.png}}
@@ -251,7 +250,7 @@
 			\label{fig:scatter_lgf5_vs_orthofinder_overlap_lgf5}
 		\end{figure}
 		
-		Distribution of ingroup sequence counts (figure:~\ref{fig:hist_seq_ct_lgf5_vs_orthofinder_90percent_overlap}) was obtained from the families where both the overlap scores were >= 0.9, to study the family size distribution of families that are consistently detected by both family building algorithms. 
+		Distribution of ingroup sequence counts (figure:~\ref{fig:hist_seq_ct_lgf5_vs_orthofinder_90percent_overlap}) was also obtained from the families where both the overlap scores were >= 0.9, to study the family size distribution of families that are consistently detected by both family building algorithms. 
 		\begin{figure}[h!]
 			\fbox{\includegraphics[width=\linewidth]{figures/hist_seq_ct_lgf5_vs_orthofinder_90percent_overlap.png}}
 			\caption{}

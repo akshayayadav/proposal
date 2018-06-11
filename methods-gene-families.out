@@ -1,0 +1,38 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Gene families}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Improving and characterizing gene families}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Gene families in legumes}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{Pair classification based family scoring}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{Methods}{section.2}% 6
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Family searching and collecting closest non-family sequences}{subsection.2.1}% 7
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Forming family and non-family pairs}{subsection.2.1}% 8
+\BOOKMARK [3][-]{subsubsection.2.1.3}{Model building and assessing classification performance}{subsection.2.1}% 9
+\BOOKMARK [3][-]{subsubsection.2.1.4}{Predicting missing sequences}{subsection.2.1}% 10
+\BOOKMARK [2][-]{subsection.2.2}{Preliminary results}{section.2}% 11
+\BOOKMARK [2][-]{subsection.2.3}{Signficance}{section.2}% 12
+\BOOKMARK [2][-]{subsection.2.4}{Future work}{section.2}% 13
+\BOOKMARK [3][-]{subsubsection.2.4.1}{Merging small legume families}{subsection.2.4}% 14
+\BOOKMARK [3][-]{subsubsection.2.4.2}{Solving scalability issues}{subsection.2.4}% 15
+\BOOKMARK [1][-]{section.3}{Tree based family scoring}{}% 16
+\BOOKMARK [2][-]{subsection.3.1}{Methods}{section.3}% 17
+\BOOKMARK [2][-]{subsection.3.2}{Preliminary results}{section.3}% 18
+\BOOKMARK [2][-]{subsection.3.3}{Significance}{section.3}% 19
+\BOOKMARK [2][-]{subsection.3.4}{Future work}{section.3}% 20
+\BOOKMARK [1][-]{section.4}{Domain composition based family scoring}{}% 21
+\BOOKMARK [2][-]{subsection.4.1}{Methods}{section.4}% 22
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Domain composition based jaccard score}{subsection.4.1}% 23
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Domain feature vector based cosine score}{subsection.4.1}% 24
+\BOOKMARK [3][-]{subsubsection.4.1.3}{Preliminary results}{subsection.4.1}% 25
+\BOOKMARK [2][-]{subsection.4.2}{Significance}{section.4}% 26
+\BOOKMARK [2][-]{subsection.4.3}{Future work}{section.4}% 27
+\BOOKMARK [1][-]{section.5}{Building high-quality consensus set of families by comparing family sets}{}% 28
+\BOOKMARK [2][-]{subsection.5.1}{Methods}{section.5}% 29
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Building HMM sets for families}{subsection.5.1}% 30
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Classifying common set of proteomes into families using HMM sets}{subsection.5.1}% 31
+\BOOKMARK [3][-]{subsubsection.5.1.3}{Calculating family correspondence and family overlaps between the sets}{subsection.5.1}% 32
+\BOOKMARK [2][-]{subsection.5.2}{Preliminary results}{section.5}% 33
+\BOOKMARK [2][-]{subsection.5.3}{Future work}{section.5}% 34
+\BOOKMARK [1][-]{section.6}{Biological characterization of the legume families}{}% 35
+\BOOKMARK [2][-]{subsection.6.1}{Methods}{section.6}% 36
+\BOOKMARK [2][-]{subsection.6.2}{Preliminary results}{section.6}% 37
+\BOOKMARK [2][-]{subsection.6.3}{Future work}{section.6}% 38

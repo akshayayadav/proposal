@@ -15,14 +15,15 @@
 	\title{Methods for improving and characterizing gene families}
 	\maketitle
 	\section{Abstract}
+	Gene families are groups of genes that have evolved from single common ancestral gene present the common ancestor of given set of species. Studying evolution of genes in the families helps in inferring evolution of species. Gene families also helps in detected evolutionary/funtionally equivalent regions between multiple different genomes. Current gene family clustering methods can produce non-optimal families that are under-clustered (missing sequences) or over-clustered (containing sequences from more than two or more families). This project presents methods that post-analyzes gene families, after they have been built using existing family building methods. The proposed pair classification based method can be used to detect and correct under-clustered families and for characterizing true families (family separation). The tree based and the domain composition based methods can be used for separating over-clustered families. Also, families that are consistently detected by different methods and can be obtained using the proposed family sets comparisons workflow. Finally, the high-quality gene families from legume species, obtained using the proposed methods, are first divided into different groups based on their evolutionary characteristics and each group is characterized biologically using Gene Ontology enrichment analysis.  
 	
-	\section{Specific aims}
+	\section{Specific objectives}
 		\begin{enumerate}
-			\item Developing and assessing pair classification based method for detecting under-clustered gene families
+			\item Developing pair classification based method for detecting under-clustered gene families
 			
-			\item Developing and assessing tree based and domain based methods for detecting over-clustered gene families
+			\item Developing tree based and domain composition based methods for detecting over-clustered families
 			
-			\item Workflow for obtaining consensus families from multiple family sets
+			\item Developing workflow for building consensus families from multiple family sets
 			
 			\item Biological characterization of gene families in legumes
 		\end{enumerate}
@@ -35,9 +36,9 @@
 		Clustering genes into families helps in capturing evolutionary information from multiple species for studying the divergence or conservation of particular biological functions, with respect to given set of species. Gene families can also be used for identification of candidates drug/vaccine development in case of parasites like Plasmodium Falciparum which causes malaria in humans (Gardner et al. 2002; Kissinger et al. 2002; Bahl et al. 2003). Gene families have also been used for annotation of newly sequenced genomes and for anti-bacterial drug development by cross-referencing functional information from multiple species (Tatusov et al. 1997; Galperin and Koonin 1999; Natale et al. 2000a,b; Forterre 2002)
 		
 		\subsection{Improving and characterizing gene families}
-		The Clusters of Orthologous Groups (COG) database is one of the earliest methods for building gene families (Tatusov et al. 2000, 2001) where orthologous groups are identified based on reciprocal best hits from all-against-all BLAST searches of complete proteomes among three distinct phylogenetic lineages. Existing family building algorithms can be divided into 2 main categories viz: BLAST/alignment statistics based clustering approaches and tree based approaches. The BLAST based clustering approaches either operate on individual pairs of species and then expand to multiple species, example - MultiParanoid (Inparanoid), OMA (Alexeyenko et. al 2006; Remm et. al. 2001 ;Roth et. al. 2008; Altenhoff et. al. 2011), or attempt to infer families directly from multiple species with the common ancestor of given set of species as a reference like  OrthoMCL, OrthoFinder (Li et. al. 2003; Emms et.al. 2015). Tree-based methods compare the gene trees with the species trees using tree reconciliation methods for building gene families (Li et. al.; Van der Heijden et. al.; Wapinski et. al.; Hubbard et. al.; Dehal et. al.).
+		The Clusters of Orthologous Groups (COG) database is one of the earliest methods for building gene families (Tatusov et al. 2000, 2001) where orthologous groups are identified based on reciprocal best hits from all-against-all BLAST searches of complete proteomes among three distinct phylogenetic lineages. Existing family building algorithms can be divided into 2 main categories viz: BLAST/alignment statistics based clustering approaches and tree based approaches. The BLAST based clustering approaches either operate on individual pairs of species and then expand to multiple species, example - MultiParanoid (Inparanoid), OMA (Alexeyenko et. al 2006; Remm et. al. 2001 ;Roth et. al. 2008; Altenhoff et. al. 2011), or attempt to infer families directly from multiple species with the common ancestor of given set of species as a reference like  OrthoMCL, OrthoFinder (Li et. al. 2003; Emms et.al. 2015). Tree-based methods compare the gene trees with the species trees using tree reconciliation methods for building gene families (Li et. al. 2006; Van der Heijden et. al. 2007; Wapinski et. al. 2007; Hubbard et. al. 2006; Dehal et. al. 2006).
 		  
-		Although, majority of families produced by existing methods can be expected to be consistent and true, many non-optimal families could be produced due to under-clustering or over-clustering. Under-clustered families are unusually small clusters that may have been fragmented due to low recall (missing sequences). Over-clustered families are unusually large sequence clusters that may been produced due to merging of two or more closely related families. Also, a significant number of sequences can remain un-clustered and could be wrongly considered as singletons or orphan genes. 
+		Although, majority of families produced by existing methods can be expected to be consistent and true, many non-optimal families could be produced due to under-clustering or over-clustering. Under-clustered families are those families that may have been fragmented by the clustering method (missing sequences). Over-clustered families are those families that may been produced due to merging of two or more closely related families. Also, a significant number of sequences can remain un-clustered and could be wrongly considered as singletons or orphan genes. 
 		
 		Therefore, it is important to post-analyze and assign confidence scores to individual families obtained using the existing methods based on family accuracy. Here, I propose a suite of methods and tools for improving under-clustered/over-clustered gene families, and for characterizing true and consistent families.
 		
@@ -49,7 +50,7 @@
 		Approximately 17k-18k gene families were obtained using a Ks-based (synonymous substitutions per site) family building procedure from the Papilionoid species proteomes. Additionally,  a different set of 20k families was also obtained from Papilionoid species using the OthroFinder method (Emms et.al. 2015) for comparison.
 		\pagebreak
 
-	\section{Objective 1: Pair classification based family scoring} 
+	\section{Objective 1: Developing pair classification based method for detecting under-clustered gene families} 
 	This scoring method leverages the basic evolutionary property of gene families - all the sequences in the family must have diverged at/after the separation of earliest diverging species and none of the sequences outside the family have diverged in the family. Accordingly, for a given family, this method attempts to separate pairs from the family, from pairs between the family sequences and non-family sequences. The separation statistics tell how well a given family of sequences can be circumscribed from closest non-family sequences, which can provide an indication of family completeness.
 		\subsection{Methods}
 			\subsubsection{Family searching and collecting closest non-family sequences}
@@ -137,7 +138,7 @@
 			
 			\pagebreak
 	
-	\section{Objective 2: Methods for detecting over-clustered families}	
+	\section{Objective 2: Developing tree based and domain composition based methods for detecting over-clustered families}	
 	\subsection{Tree based family scoring}
 	Family trees are largely expected to follow the pattern of evolution from the species tree. This equivalence between gene trees and species has been used previously in multiple methods like TreeFam, LOFT, SYNERGY, ENSEMBLE 2007, PhIGs (Li et. al.; Van der Heijden et. al.; Wapinski et. al.; Hubbard et. al.; Dehal et. al.) for building gene families and detection of orthologs and paralogs from the family trees. Animal gene families in TreeFam are the group of genes evolved from a single gene in last common of all animals. Genes in one family are identified on the basis that they are phylogenetically separated by one or more genes from the outgroup species (S. cerevisiae, S pombe. or A. thaliana)
 	
@@ -244,7 +245,7 @@
 	It will also be interesting to study biological characteristics of families with high tree-based precision scores and low domain composition scores as these are the rapidly evolving families that have gained or lost protein domains within short evolutionary periods.
 	
 	\pagebreak
-	\section{Objective 3: Building high-quality consensus set of families by comparing family sets}
+	\section{Objective 3: Developing workflow for building consensus families from multiple family sets}
 	Well-defined families can be detected consistently by multiple family building methods. This workflow involves comparing the 2 sets of families, obtained from 2 different family building approaches, to establish family correspondences between the 2 sets i.e. which family from one set best corresponds to which family from the second set. Degrees of overlaps between corresponding families, between the two sets, can be used as measure of family consistency.
 	
 	This workflow is used to compare set of Ks-based legume families to a set of families obtained from OrthoFinder, to obtain a set of high-quality consensus families. OrthoFinder is one of the latest family building methods that is proven to beat popular family construction methods including OrthoMCL. The two sets are compared through their respective family HMM sets.

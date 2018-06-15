@@ -14,12 +14,12 @@
 \newlabel{fig:collecting_non_fam_seqs}{{1}{5}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Forming positive and negative pairs from family and non-family sequences}}{5}}
 \newlabel{fig:forming_pairs}{{2}{5}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.4}Predicting missing sequences}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Preliminary results}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Training and model evaluation}}{7}}
-\newlabel{fig:train_classify1}{{3}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Test pair classification}}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Training pair classification models for family}}{6}}
+\newlabel{fig:train_classify1}{{3}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Evaluating pair classification model}}{7}}
 \newlabel{fig:train_classify2}{{4}{7}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.4}Predicting missing sequences}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Preliminary results}{7}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Example of PR-curve obtained during training}}{8}}
 \newlabel{fig:test_PR-curve}{{5}{8}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Distribution of PR-AUC values for true YGOB families}}{9}}
@@ -36,51 +36,57 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Tree based family scoring}{13}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}Methods}{13}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}Preliminary results}{13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Distribution of tree based precision scores of lgf5 families}}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Distribution of tree based precision scores of Ks-based families}}{14}}
 \newlabel{fig:hist_tree_precision_scores_lgf5}{{9}{14}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.3}Significance}{14}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.4}Future work}{14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Plot of tree based precision scores v/s ingroup sequence count for lgf5 families}}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Plot of tree based precision scores versus ingroup sequence count for lgf5 families}}{15}}
 \newlabel{fig:scatter_tree_precision_vs_seqct_lgf5}{{10}{15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Domain composition based family scoring}{16}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}Methods}{16}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {5.2.1.1}Domain composition based jaccard score}{16}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {5.2.1.2}Domain feature vector based cosine score}{16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Distribution of domain composition based jaccard scores for the lgf5 families}}{17}}
-\newlabel{fig:hist_domain_jaccard_scores_lgf5}{{11}{17}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}Preliminary results}{17}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Plot of domain composition based jaccard score v/s ingroup sequence counts for lgf5 families}}{18}}
-\newlabel{fig:scatter_domain_jaccard_vs_seq_ct_lgf5}{{12}{18}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Distribution of domain composition based cosine scores for the lgf5 families}}{19}}
-\newlabel{fig:hist_domain_cosine_scores_lgf5}{{13}{19}}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Plot of domain composition based cosine scores v/s ingroup sequence counts for lgf5 families}}{20}}
-\newlabel{fig:scatter_domain_cosine_vs_seq_ct_lgf5}{{14}{20}}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Plot of domain composition based cosine score v/s tree based precision scores for lgf5 families}}{21}}
-\newlabel{fig:scatter_domain_cosine_vs_tree_precision_lgf5}{{15}{21}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.3}Significance}{22}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.4}Future work}{22}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Objective 3: Developing workflow for building consensus families from multiple family sets}{23}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Methods}{23}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.1}Building HMM sets for families}{23}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.2}Classifying common set of proteomes into families using HMM sets}{23}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.3}Calculating family correspondence and family overlaps between the sets}{23}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Preliminary results}{24}}
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Plot of the two way overlap scores obtained from comparison between lgf5 and orthofinder family sets}}{24}}
-\newlabel{fig:scatter_lgf5_vs_orthofinder_overlap_lgf5}{{16}{24}}
-\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Distribution of ingroup sequence counts for lgf5 families with both overlaps scores $\geq $ 0.9 }}{25}}
-\newlabel{fig:hist_seq_ct_lgf5_vs_orthofinder_90percent_overlap}{{17}{25}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Future work}{25}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Objective 4: Biological characterization of the legume families}{26}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Methods}{26}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Preliminary results}{26}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Future work}{26}}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Distribution of ingroup sequence counts for lgf5 families}}{27}}
-\newlabel{fig:hist_lgf5_family_size_groups}{{18}{27}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces GO enrichment for Group 1 soybean genes}}{27}}
-\newlabel{tab:gotable_group1}{{1}{27}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces GO enrichment for Group 2 subset soybean genes}}{28}}
-\newlabel{tab:gotable_group2_subset}{{2}{28}}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces GO enrichment for Group 3 soybean genes}}{28}}
-\newlabel{tab:gotable_group3}{{3}{28}}
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces GO enrichment for Group 4 soybean genes}}{28}}
-\newlabel{tab:gotable_group4}{{4}{28}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Example family tree with tree based pair precision score = 0.095}}{15}}
+\newlabel{fig:tree_based_quality_type1_L_J5W12Z}{{11}{15}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.3}Significance}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Example family tree with tree based pair precision score = 0.507}}{16}}
+\newlabel{fig:tree_based_quality_type2_L_4L11VC}{{12}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Example family tree with tree based pair precision score = 0.879}}{16}}
+\newlabel{fig:tree_based_quality_type3_L_4VWLVV}{{13}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.4}Future work}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Domain composition based family scoring}{17}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}Methods}{17}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {5.2.1.1}Domain composition based jaccard score}{17}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {5.2.1.2}Domain feature vector based cosine score}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Distribution of domain composition based jaccard scores for the lgf5 families}}{18}}
+\newlabel{fig:hist_domain_jaccard_scores_lgf5}{{14}{18}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}Preliminary results}{18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Plot of domain composition based jaccard score v/s ingroup sequence counts for lgf5 families}}{19}}
+\newlabel{fig:scatter_domain_jaccard_vs_seq_ct_lgf5}{{15}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Distribution of domain composition based cosine scores for the lgf5 families}}{20}}
+\newlabel{fig:hist_domain_cosine_scores_lgf5}{{16}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Plot of domain composition based cosine scores v/s ingroup sequence counts for lgf5 families}}{21}}
+\newlabel{fig:scatter_domain_cosine_vs_seq_ct_lgf5}{{17}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Plot of domain composition based cosine score v/s tree based precision scores for lgf5 families}}{22}}
+\newlabel{fig:scatter_domain_cosine_vs_tree_precision_lgf5}{{18}{22}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.3}Significance}{23}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.4}Future work}{23}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Objective 3: Developing workflow for building consensus families from multiple family sets}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Methods}{24}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.1}Building HMM sets for families}{24}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.2}Classifying common set of proteomes into families using HMM sets}{24}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.3}Calculating family correspondence and family overlaps between the sets}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Preliminary results}{25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Plot of the two way overlap scores obtained from comparison between lgf5 and orthofinder family sets}}{25}}
+\newlabel{fig:scatter_lgf5_vs_orthofinder_overlap_lgf5}{{19}{25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Distribution of ingroup sequence counts for lgf5 families with both overlaps scores $\geq $ 0.9 }}{26}}
+\newlabel{fig:hist_seq_ct_lgf5_vs_orthofinder_90percent_overlap}{{20}{26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Future work}{26}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Objective 4: Biological characterization of the legume families}{27}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Methods}{27}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Preliminary results}{27}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Future work}{27}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Distribution of ingroup sequence counts for lgf5 families}}{28}}
+\newlabel{fig:hist_lgf5_family_size_groups}{{21}{28}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces GO enrichment for Group 1 soybean genes}}{28}}
+\newlabel{tab:gotable_group1}{{1}{28}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces GO enrichment for Group 2 subset soybean genes}}{29}}
+\newlabel{tab:gotable_group2_subset}{{2}{29}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces GO enrichment for Group 3 soybean genes}}{29}}
+\newlabel{tab:gotable_group3}{{3}{29}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces GO enrichment for Group 4 soybean genes}}{29}}
+\newlabel{tab:gotable_group4}{{4}{29}}

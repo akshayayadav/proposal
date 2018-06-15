@@ -81,13 +81,13 @@
 			
 			\begin{figure}
 				\fbox{\includegraphics[width=\linewidth]{figures/train_classify1.png}}
-				\caption{Training and model evaluation}
+				\caption{Training pair classification models for family}
 				\label{fig:train_classify1}
 			\end{figure}
 			
 			\begin{figure}
 				\fbox{\includegraphics[width=\linewidth]{figures/train_classify2.png}}
-				\caption{Test pair classification}
+				\caption{Evaluating pair classification model}
 				\label{fig:train_classify2}
 			\end{figure}
 			
@@ -117,7 +117,7 @@
 		
 		Even though the quality assessment method is proven to work on good/true families it is important to study the behaviour of the method on non-optimal families. To check the behaviour of the method on incomplete families, the true yeast families were artificially manipulated so that all the families are randomly missing 20\% of family sequences.
 		
-		The histogram in figure:~\ref{fig:hist_pr-auc_delete_ygob} shows the distribution of PR-AUC values for 4796 artificially manipulated families where every family is missing 20\% of their sequences. A scatter-plot (figure:~\ref{fig:scatter_pr-auc_true_vs_pr-auc_delete_ygob}) of true families PR-AUCs v/s PR-AUCs after removing family sequences shows the drop in the PR-AUCs after removing family sequences from true families. The distribution indicates that the overall quality of the families has dropped significantly which shows ability of method to detect incomplete families.
+		The histogram in figure:~\ref{fig:hist_pr-auc_delete_ygob} shows the distribution of PR-AUC values for 4796 artificially manipulated families where every family is missing 20\% of their sequences. A scatter-plot (figure:~\ref{fig:scatter_pr-auc_true_vs_pr-auc_delete_ygob}) of true families PR-AUCs versus PR-AUCs after removing family sequences shows the drop in the PR-AUCs after removing family sequences from true families. The distribution indicates that the overall quality of the families have dropped significantly, which shows ability of method to detect incomplete families. Specifically for 3971 out of 4796 families (83\%), the PR-AUC dropped significantly (PR-AUC$\geq$0.9 for true families and PR-AUC$<$0.75 after removing family sequences)
 		
 		\begin{figure}
 			\fbox{\includegraphics[width=\linewidth]{figures/scatter_pr-auc_true_vs_pr-auc_delete_ygob.png}}
@@ -125,7 +125,8 @@
 			\label{fig:scatter_pr-auc_true_vs_pr-auc_delete_ygob}
 		\end{figure}
 	
-		For each manipulated family with missing sequences, we also predicted the missing sequences back using lowest score cutoff obtained during training. The predicted missing sequences were compared to the true missing sequences and, precision and recall values were calculated to study the accuracy of predicted missing sequences. Precision was calculated as (TP/(TP+FP)) and recall was calculated as (TP/(TP+FN)) where TP are those predicted missing sequences that were truly missing from the family, FP are those that were predicted as missing but do not actually belong the family and FN are those that are truly missing but were not predicted as missing by the method. Out of 4796, the prediction performance for missing sequences was good (precision $\geq$ 0.75 and recall $\geq$ 0.75) for 3760 (78.4\%) families.
+		For each manipulated family, the missing sequences were predicted 
+		back using lowest score cutoff obtained during training. The predicted missing sequences were compared to the true missing sequences and, precision and recall values were calculated to study the accuracy of predicted missing sequences. Precision was calculated as (TP/(TP+FP)) and recall was calculated as (TP/(TP+FN)) where True Positive (TP) are those predicted missing sequences that were truly missing from the family, False Positive (FP) are those that were predicted as missing but do not actually belong the family and False Negative (FN) are those that are truly missing but were not predicted as missing by the method. Out of 4796, the prediction performance for missing sequences was good (precision $\geq$ 0.75 and recall $\geq$ 0.75) for 3760 (78.4\%) families.
 		
 		\subsection{Signficance}
 		This family scoring method assumes the given family to be under-clustered i.e. majority of sequences have diverged into the family and attempts to build an HMM-based classifier that classifies pairs of sequences formed within the family from the pairs formed between family and the closest non-family sequences. The classification performance is mainly given by the PR-AUC value which shows how well the given family is separable from the closest families. This scoring method can be used in two ways viz. to characterize true families and to detect missing sequences for under-clustered families. For characterizing true families, the PR-curve and the PR-AUC can be used to see how well-behaved the family is in terms of its evolution. The best score cutoff obtained during training can be used to add sequences to the families from newly sequenced species. For under-clustered families, the PR-AUC is expected to be low as the precision value drops due to greater number of FP pairs (sequences trying to get in the family). The missing family sequences can be predicted using the best or the lowest score cutoffs depending upon preference of  high precision or high recall for prediction. If precision is preferred over recall then the best score cutoff can be used and if recall is preferred over precision then the lowest score cutoff can be used for predicting missing sequences.
@@ -140,51 +141,73 @@
 	
 	\section{Objective 2: Developing tree based and domain composition based methods for detecting over-clustered families}	
 	\subsection{Tree based family scoring}
-	Family trees are largely expected to follow the pattern of evolution from the species tree. This equivalence between gene trees and species has been used previously in multiple methods like TreeFam, LOFT, SYNERGY, ENSEMBLE 2007, PhIGs (Li et. al.; Van der Heijden et. al.; Wapinski et. al.; Hubbard et. al.; Dehal et. al.) for building gene families and detection of orthologs and paralogs from the family trees. Animal gene families in TreeFam are the group of genes evolved from a single gene in last common of all animals. Genes in one family are identified on the basis that they are phylogenetically separated by one or more genes from the outgroup species (S. cerevisiae, S pombe. or A. thaliana)
+	Family trees are largely expected to follow the pattern of evolution from the species tree. This equivalence between gene trees and species trees has been used previously in multiple methods like TreeFam, LOFT, SYNERGY, ENSEMBLE 2007, PhIGs (Li et. al.; Van der Heijden et. al.; Wapinski et. al.; Hubbard et. al.; Dehal et. al.) for building gene families and detection of orthologs and paralogs from the family trees. Animal gene families in TreeFam are the group of genes evolved from a single gene in last common of all animals. Genes in one family are identified on the basis that they are phylogenetically separated by one or more genes from the outgroup species (S. cerevisiae, S pombe. or A. thaliana)
 	
 	Since gene families contain sequences that have diverged at or after the divergence of the earliest diverging species under study, genes within families have also diverged after the divergence of outgroup species. This evolutionary property of gene family can be used to score family trees by calculating the proportion of ingroup sequence pairs that appear to have diverged after the divergence of outgroup sequences in the corresponding evolutionary trees of the families.
 		\subsubsection{Methods}
 		For a given rooted family tree, each pair of ingroup sequences, found within the tree, is labeled as True Positive (TP) or False Positive (FP) depending upon whether the pair appears to have diverged after or before the divergence of one or more outgroup sequences. A precision score for the family is calculated  as TP/(TP+FP) which gives the proportion of ingroup pairs diverging after the outgroup separation in the family tree.
 		
-		To check the divergence of any ingroup sequence pair in the tree, the MRCA of the pair is obtained. Then, all sequences corresponding to leaf nodes under this MRCA are collected. If this set of sequences contains one or more outgroup sequences, the corresponding ingroup pair is labelled as FP, else it is labeled as TP.
+		To check the divergence of any ingroup sequence pair in the tree, the Most Recent Common Ancestor (MRCA) of the pair is obtained. Then, all sequences corresponding to leaf nodes under this MRCA are collected. If this set of sequences contains one or more outgroup sequences, the corresponding ingroup pair is labelled as FP, else it is labeled as TP. The FP label for any ingroup pair indicates that there is atleast one outgroup sequence that has diverged after the divergence of the ingroup pair and the corresponding sequences of the pair have been wrongly clustered into one family. 
 		
 		\subsubsection{Preliminary results}
-		This scoring method was applied on 18543 legume families. The histogram (figure:~\ref{fig:hist_tree_precision_scores_lgf5}) shows the distribution of scores across the legume families. Most of the families have higher precision scores ($\geq$0.75).
+		This scoring method was applied on 18543 legume families. The figure:~\ref{fig:hist_tree_precision_scores_lgf5} shows the distribution of scores across the legume families. Most of the families have higher precision scores ($\geq$0.75).
 		
-		A scatter-plot (figure:~\ref{fig:scatter_tree_precision_vs_seqct_lgf5}) of tree-based precision scores v/s number of ingroup sequences (fig) was also obtained to study the relationship between the precision scores and family size. As expected, most of families containing 15-45 ingroup sequences  have high precision scores. A considerable number of families, containing approximately 40 ingroup sequences, have tree precision scores around 0.5. These are the families where approximately half of ingroup pairs are diverging after the divergence of one or more outgroups sequences. These families are prime candidates of over-clustered families. Also, large families with very low precision scores (majority of ingroup pairs have diverged before the outgroup divergence) may indicate problems with tree rooting.
+		Plot (figure:~\ref{fig:scatter_tree_precision_vs_seqct_lgf5}) of tree based precision scores versus number of ingroup sequences was also obtained to study the relationship between the precision scores and family size. As expected, most of families containing 15-45 ingroup sequences  have high precision scores. A considerable number of families, containing approximately 40 ingroup sequences, have tree precision scores around 0.5. These are the families where approximately half of ingroup pairs are diverging after the divergence of one or more outgroups sequences. These families are prime candidates of over-clustered families. Also, large families with very low precision scores (majority of ingroup pairs have diverged before the outgroup divergence) may indicate problems with tree rooting.
+		
 		
 		\begin{figure}[h!]
 			\fbox{\includegraphics[width=\linewidth]{figures/hist_tree_precision_scores_lgf5.png}}
-			\caption{Distribution of tree based precision scores of lgf5 families}
+			\caption{Distribution of tree based precision scores of Ks-based families}
 			\label{fig:hist_tree_precision_scores_lgf5}
 		\end{figure}
 		
 		\begin{figure}[h!]
 			\fbox{\includegraphics[width=\linewidth]{figures/scatter_tree_precision_vs_seqct_lgf5.png}}
-			\caption{Plot of tree based precision scores v/s ingroup sequence count for lgf5 families}
+			\caption{Plot of tree based precision scores versus ingroup sequence count for lgf5 families}
 			\label{fig:scatter_tree_precision_vs_seqct_lgf5}
 		\end{figure}
 		
+		Examples of family trees with typical values of tree based pair precision scores are shown below. The outgroup sequences in the trees are shown in grey. Figure \ref{fig:tree_based_quality_type1_L_J5W12Z} shows family tree with low pair precision score (0.095). For this tree, majority of ingroup sequences do not form a monophyletic clade. Figure \ref{fig:tree_based_quality_type2_L_4L11VC} shows family tree with pair precision score = 0.507. This tree has two monophyletic ingroup clades that could potentially be two ingroup families clustered together by the family building algorithm. This shows that the pair precision score can detect such over-clustered families. Finally, figure \ref{fig:tree_based_quality_type3_L_4VWLVV} shows family with high pair precision score (0.876). Majority of ingroup  sequences form a monophyletic clade with only two sequences diverging outside the family.
+		
+			
+		\begin{figure}[h!]
+			\fbox{\includegraphics[width=\linewidth]{figures/tree_based_quality_type1_L_J5W12Z.png}}
+			\caption{Example family tree with tree based pair precision score = 0.095}
+			\label{fig:tree_based_quality_type1_L_J5W12Z}
+		\end{figure}
+		
+		\begin{figure}[h!]
+			\fbox{\includegraphics[width=\linewidth]{figures/tree_based_quality_type2_L_4L11VC.png}}
+			\caption{Example family tree with tree based pair precision score = 0.507}
+			\label{fig:tree_based_quality_type2_L_4L11VC}
+		\end{figure}
+		
+		\begin{figure}[h!]
+			\fbox{\includegraphics[width=\linewidth]{figures/tree_based_quality_type3_L_4VWLVV.png}}
+			\caption{Example family tree with tree based pair precision score = 0.879}
+			\label{fig:tree_based_quality_type3_L_4VWLVV}
+		\end{figure}
+		
 		\subsubsection{Significance}
-		This simple tree-based scoring method uses basic evolutionary properties of gene families to detect if all the sequences clustered in the family truly belong in the family using the rooted evolutionary family tree. As seen from the preliminary results, this scoring method can be used to detect over-clustered families and family trees with rooting problems.
+		This simple tree-based scoring method uses basic evolutionary properties of gene families to detect if all the sequences clustered in the family truly belong in the family, using the rooted evolutionary family tree. As seen from the preliminary results, this scoring method can be used to detect over-clustered families and family trees with rooting problems.
 		
 		
 		\subsubsection{Future work}
 		Over-clustered legume families detected using this method will be corrected to obtain a set of high-quality legume families. Also, large families with low precision scores will be re-rooted to maximize the precision scores.
 		
-		The merged families obtained using the pair based scoring will also be analyzed using the tree based scoring to resolve any over-clustered families produced due to merging.
+		The merged families obtained using the pair classification based method will also be analyzed using the tree based scoring to resolve any over-clustered families produced due to merging.
 		
 		An R-package will be developed where users can analyze and score family trees with respect to a given set of outgroups. The R-package will also be able to directly extract ingroup clades from over-clustered families.
 		\pagebreak
 		
 	\subsection{Domain composition based family scoring}
-	Protein domains are sections of protein sequences that can fold and function independently. Consequently, multidomain proteins can evolve in a modular fashion through domain deletions/insertions/duplication in addition to sequence-based evolution. Databases like Pfam, PROSITE, SMART, CDD (Finn et. al.; Falquet et. al.; Letunic et. al.; Marchler-Bauer et. al.) define and store domains detected in large number of protein sequences. Domain compositions/content have been previously used to detect sequence homology with high accuracies. (Song et. al, Bitard-Feildel et. al). However, these were well separated gene families with distinctly different domain compositions (E.g. families separated at metazoan ancestor)
+	Protein domains are sections of protein sequences that can fold and function independently. Consequently, multidomain proteins can evolve in a modular fashion through domain deletions/insertions/duplication in addition to sequence-based evolution. Databases like Pfam, PROSITE, SMART, CDD (Finn et. al.; Falquet et. al.; Letunic et. al.; Marchler-Bauer et. al.) define and store domains detected in large number of protein sequences. Domain compositions/content have been previously used to detect sequence homology with high accuracies. (Song et. al, Bitard-Feildel et. al). These were well separated gene families with distinctly different domain compositions (E.g. families separated at metazoan ancestor)
 	
 	Closely related sequences from the same family can be expected to have fairly same domain types and domain content. Accordingly, this method assigns scores to given families based on number of domains shared between the sequences of the family. This scoring scheme will assign higher scores to family where most of the sequences have similar domain compositions. Good and well-conserved families are expected to have higher domain composition scores. Conversely, over-clustered families containing diverse sequences are expected to have lower scores due to less conservation of domain compositions across all the sequences.
 	
 	\subsubsection{Methods}
 		\paragraph{Domain composition based jaccard score}
-		For a given family, Pfam-A domains are assigned to all the sequences in the family using the pfamscan program (Mistry et. al.) The domains are assigned  to sequences in order of their start coordinates in the sequences. Then, for each pair of sequences in family, domain composition based jaccard score is calculated using the function: $(n1 \cup  n2)/(n1 \cap n2)$, where n1 and n2 are the sets unique domains from sequence 1 and 2 of the pair, respectively. Jaccard score for the family is calculated as mean of all pairwise jaccard scores from the family.
+		For a given family, Pfam-A domains are assigned to all the sequences in the family using the pfamscan program (Mistry et. al.) The domains are assigned  to sequences in order of their start coordinates in the sequences. Then, for each pair of sequences in family, domain composition based jaccard score is calculated using the function: $(n_1 \cup  n_2)/(n_1 \cap n_2)$, where $n_1$ and $n_2$ are the sets unique domains from sequence 1 and 2 of the pair, respectively. Jaccard score for the family is calculated as mean of all pairwise jaccard scores from the family.
 		
 		\paragraph{Domain feature vector based cosine score}
 		Here, the domain compositions of sequences within a given family are compared using their domain feature vectors. This is new scoring method for comparing domain compositions of two sequences. For example, consider 2 sequences X and Y from the same family having following domain order along the sequence, X: \{A,B,B,C\} and Y: \{A,A,B,D\}. The duplicate domains in both the sequences are assigned unique ids to distinguish them from each other, X: \{A, B, B-2, C\} and Y:\{A, A-2, B, D\}. The domain content universe for both the sequences is (A, A-2, B, B-2, C, D). Accordingly, the domain feature vector for both sequences is X: $(x_{1}, 0, x_{2}, x_{3}, x_{4}, 0)$ and Y: $(y_{1}, y_{2}, y_{3}, 0, 0, y_{4})$, where $x_{i}$ and $y_{i}$ are the alignment scores for the corresponding domain HMMs aligning against the sequences X and Y, respectively. Cosine similarities are calculated between all pairs of sequences using their domain feature vectors and the domain composition score for the family is calculated as the mean of all pairwise cosine scores.

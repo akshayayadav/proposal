@@ -16,17 +16,17 @@
 	\title{Methods for improving and characterizing gene families}
 	\maketitle
 	\section{Abstract}
-	Gene families are groups of genes that have evolved from single common ancestral gene present the common ancestor of given set of species. Studying evolution of genes in the families helps in inferring evolution of species. Gene families also helps in detected evolutionary/funtionally equivalent regions between multiple different genomes. Current gene family clustering methods can produce non-optimal families that are under-clustered (missing sequences) or over-clustered (containing sequences from more than two or more families). This project presents methods that post-analyzes gene families, after they have been built using existing family building methods. The proposed pair classification based method can be used to detect and correct under-clustered families and for characterizing true families (family separation). The tree based and the domain composition based methods can be used for separating over-clustered families. Also, families that are consistently detected by different methods and can be obtained using the proposed family sets comparisons workflow. Finally, the high-quality gene families from legume species, obtained using the proposed methods, are first divided into different groups based on their evolutionary characteristics and each group is characterized biologically using Gene Ontology enrichment analysis.  
+	Gene families are groups of genes that have evolved from single common ancestral gene present the common ancestor of given set of species. Studying evolution of genes in the families helps in inferring evolution of species and in detecting evolutionarily/funtionally equivalent regions between multiple different genomes. Current gene family clustering methods can produce non-optimal families that could be under-clustered (missing sequences) or over-clustered (containing sequences from more than two or more families). This project presents methods that post-analyzes gene families for under/over-clustering problems, after they have been built using existing family building methods. The proposed pair classification based method can be used to detect and correct under-clustered families and for characterizing true families (family separation). The tree based and the domain composition based methods can be used for separating over-clustered families. Also, families that are consistently detected by different methods and can be obtained using the proposed family sets comparisons workflow. Finally, the high-quality gene families from legume species, obtained using the proposed methods, are first divided into different groups based on their evolutionary characteristics and each group is characterized using Gene Ontology enrichment analysis.  
 	
 	\section{Specific objectives}
 		\begin{enumerate}
-			\item Developing pair classification based method for detecting under-clustered gene families
+			\item Developing pair classification based method for detecting under-clustered gene families.
 			
-			\item Developing tree based and domain composition based methods for detecting over-clustered families
+			\item Developing tree based and domain composition based methods for detecting over-clustered gene families.
 			
-			\item Developing workflow for building consensus families from multiple family sets
+			\item Developing workflow for building consensus families from multiple family sets.
 			
-			\item Biological characterization of gene families in legumes
+			\item Biological characterization of gene families in legumes.
 		\end{enumerate}
 	
 	
@@ -44,7 +44,7 @@
 		Therefore, it is important to post-analyze and assign confidence scores to individual families obtained using the existing methods based on family accuracy. Here, I propose a suite of methods and tools for improving under-clustered/over-clustered gene families, and for characterizing true and consistent families.
 		
 		\subsection{Gene families in legumes}
-		The legume family (Fabaceae) consists of 750 genera and 19,500 species of flowering plants making the family the third largest family of flowering plants (Lewis et al. 2005). The family is broadly divided into four major lineages viz. Papilionoideae, Mimosoideae-Cassiinae-Caesalpinieae (MCC), Detarieae and Cercideae out of which the Papilionoideae is the largest. The Papilionoid sub-family includes species like Arachis hypogaea (cultivated peanut), Arachis duranensis and Arachis ipaensis (wild peanut varieties), Cajanus cajan (pigeonpea), Cicer arietinum (chickpea), Glycine max (soybean), Lotus japonicus (Lotus), Lupinus angustifolius (narrow-leafed lupin), Medicago truncatula (barrel medic), Phaseolus vulgaris (common bean), Trifolium pratense (red clover), Vigna angularis (adzuki bean), Vigna radiata (mungbean) and Vigna unguiculata (Cowpea).
+		The legume family (Fabaceae) consists of 750 genera and 19,500 species of flowering plants making the family the third largest family of flowering plants (Lewis et al. 2005). The family is broadly divided into four major lineages viz. Papilionoideae, Mimosoideae-Cassiinae-Caesalpinieae (MCC), Detarieae and Cercideae, out of which the Papilionoideae is the largest. The Papilionoid sub-family includes species like Arachis hypogaea (cultivated peanut), Arachis duranensis and Arachis ipaensis (wild peanut varieties), Cajanus cajan (pigeonpea), Cicer arietinum (chickpea), Glycine max (soybean), Lotus japonicus (Lotus), Lupinus angustifolius (narrow-leafed lupin), Medicago truncatula (barrel medic), Phaseolus vulgaris (common bean), Trifolium pratense (red clover), Vigna angularis (adzuki bean), Vigna radiata (mungbean) and Vigna unguiculata (Cowpea).
 		
 		An ancient Whole Genome Duplication (WGD) occurred in common ancestor of the Papilionoid sub-family around 55 Ma. (Blanc and Wolfe 2004; Schlueter et al. 2004; Pfeil et al. 2005; Cannon et al. 2006; Bertioli et al. 2009; Cannon et. al. 2014). In addition, the Glycine and Lupin lineages have also undergone independent lineage specific WGDs (Cannon et. 2014; Kroc et. al 2014) 
 		
@@ -134,7 +134,8 @@
 		
 		\subsection{Future work}
 			\subsubsection{Merging small legume families}
-			This scoring method will be used to inspect and merge small legume families into larger families. This will help in reducing the number of under-clustered families and generating a set of high-quality legume families.
+			This scoring method will be used to inspect and merge small legume families into larger families. There are 2042 legume families that could be possibly under-clustered ($\leq$10 family size). This will help in reducing the number of under-clustered families and generating a set of high-quality legume families.
+			
 			\subsubsection{Solving scalability issues}
 			Currently, the pair classification based method is not fast enough to be efficiently applied on all legume the families. To solve these scalability issues, multi-threading can be implemented to execute the test-train split iterations parallelly. 
 			
@@ -142,7 +143,7 @@
 	
 	\section{Objective 2: Developing tree based and domain composition based methods for detecting over-clustered families}	
 	\subsection{Tree based family scoring}
-	Family trees are largely expected to follow the pattern of evolution from the species tree. This equivalence between gene trees and species trees has been used previously in multiple methods like TreeFam, LOFT, SYNERGY, ENSEMBLE 2007, PhIGs (Li et. al.; Van der Heijden et. al.; Wapinski et. al.; Hubbard et. al.; Dehal et. al.) for building gene families and detection of orthologs and paralogs from the family trees. Animal gene families in TreeFam are the group of genes evolved from a single gene in last common of all animals. Genes in one family are identified on the basis that they are phylogenetically separated by one or more genes from the outgroup species (S. cerevisiae, S pombe. or A. thaliana)
+	Family trees are largely expected to follow the pattern of evolution from the species tree. This equivalence between gene trees and species trees has been used previously in multiple methods like TreeFam, LOFT, SYNERGY, ENSEMBLE 2007, PhIGs (Li et. al. 2006; Van der Heijden et. al. 2007; Wapinski et. al. 2007; Hubbard et. al. 2006; Dehal et. al. 2006) for building gene families and detection of orthologs and paralogs from the family trees. Animal gene families in TreeFam are the group of genes evolved from a single gene in last common of all animals. Genes in one family are identified on the basis that they are phylogenetically separated by one or more genes from the outgroup species (S. cerevisiae, S pombe. or A. thaliana)
 	
 	Since gene families contain sequences that have diverged at or after the divergence of the earliest diverging species under study, genes within families have also diverged after the divergence of outgroup species. This evolutionary property of gene families can be used to score family trees by calculating the proportion of ingroup sequence pairs that appear to have diverged after the divergence of outgroup sequences in the corresponding phylogenetic trees of the families.
 		\subsubsection{Methods}
@@ -168,7 +169,7 @@
 			\label{fig:scatter_tree_precision_vs_seqct_lgf5}
 		\end{figure}
 		
-		Examples of family trees with typical values of tree based pair precision scores are shown below. The outgroup sequences in the trees are shown in grey. Figure \ref{fig:tree_based_quality_type1_L_J5W12Z} shows family tree with low pair precision score (0.095). For this tree, majority of ingroup sequences do not form a monophyletic clade. Figure \ref{fig:tree_based_quality_type2_L_4L11VC} shows family tree with pair precision score = 0.507. This tree has two monophyletic ingroup clades that could potentially be two ingroup families clustered together by the family building algorithm. This shows that the pair precision score can detect such over-clustered families. Finally, figure \ref{fig:tree_based_quality_type3_L_4VWLVV} shows family with high pair precision score (0.876). Majority of ingroup  sequences form a monophyletic clade with only two sequences diverging outside the family.
+		Examples of family trees with typical values of tree based pair precision scores are shown below. The outgroup sequences in the trees are shown in grey. Figure \ref{fig:tree_based_quality_type1_L_J5W12Z} shows family tree with low pair precision score (0.095). For this family, majority of ingroup sequences do not form a monophyletic clade. Figure \ref{fig:tree_based_quality_type2_L_4L11VC} shows family tree with pair precision score = 0.507. This family has two monophyletic ingroup clades that could potentially be two ingroup families clustered together by the family building algorithm. This shows that the pair precision score can detect such over-clustered families. Finally, figure \ref{fig:tree_based_quality_type3_L_4VWLVV} shows family with high pair precision score (0.876). Majority of ingroup  sequences form a monophyletic clade with two sequences diverging outside the family.
 		
 			
 		\begin{figure}[h!]
@@ -240,7 +241,7 @@
 			\label{fig:hist_domain_cosine_scores_lgf5}
 		\end{figure}
 		
-		The plot (figure:~\ref{fig:scatter_domain_cosine_vs_seq_ct_lgf5}) showing the relationship between the cosine score and family size was also obtained to study the relationship between cosine score and number of ingroup sequences in the family. Here, the scores correlate well (better that Jaccard scores) with family sizes, with higher scores for families with number of ingroup sequences between 15-45.
+		The plot (figure:~\ref{fig:scatter_domain_cosine_vs_seq_ct_lgf5}) showing the relationship between the cosine score and family size was also obtained to study the relationship between cosine score and number of ingroup sequences in the family. Here, the scores correlate well (better than Jaccard scores) with family sizes, with higher scores for families with number of ingroup sequences between 15-45.
 		
 		\begin{figure}
 			\fbox{\includegraphics[width=\linewidth]{figures/scatter_domain_cosine_vs_seq_ct_lgf5.png}}
@@ -248,7 +249,7 @@
 			\label{fig:scatter_domain_cosine_vs_seq_ct_lgf5}
 		\end{figure}
 		
-		A plot (figure:~\ref{fig:scatter_domain_cosine_vs_tree_precision_lgf5}) showing the relationship between the tree based precision scores and domain cosine scores was also obtained. The majority of families with high tree based precision scores also have high cosine scores. In addition, two types of families can be seen from the plot; families with high tree based precision scores and lower domain scores and vice versa. The former are those that seem to evolve rapidly through domain insertion/deletion. The latter are those that seem to evolve slowly conserving domain compositions over longer evolutionary periods which could be the reason for the over-clustering.
+		A plot (figure:~\ref{fig:scatter_domain_cosine_vs_tree_precision_lgf5}) showing the relationship between the tree based pair precision scores and domain cosine scores was also obtained. The majority of families with high tree based precision scores also have high cosine scores. Specifically, for 11899 families, out of 15428 families, (77.1\%) both, the tree based pair precision scores and domain composition based cosine scores are $\geq$ 0.75.  In addition, two types of families can be seen from the plot; families with high tree based precision scores and lower domain scores and vice versa. The former are those that seem to evolve rapidly through domain insertion/deletion. The latter are those that seem to evolve slowly conserving domain compositions over longer evolutionary periods which could be the reason for the over-clustering.
 		
 		\begin{figure}
 			\fbox{\includegraphics[width=\linewidth]{figures/scatter_domain_cosine_vs_tree_precision_lgf5.png}}
@@ -293,14 +294,15 @@
 		  
 		\begin{figure}[h!]
 			\fbox{\includegraphics[width=\linewidth]{figures/scatter_lgf5_vs_orthofinder_overlap_lgf5.png}}
-			\caption{Plot of the two way overlap scores obtained from comparison between lgf5 and orthofinder family sets}
+			\caption{Plot of the two way overlap scores obtained from comparison between Ks-based and OrthoFinder family sets}
 			\label{fig:scatter_lgf5_vs_orthofinder_overlap_lgf5}
 		\end{figure}
 		
 		The distribution of ingroup sequence counts (figure:~\ref{fig:hist_seq_ct_lgf5_vs_orthofinder_90percent_overlap}) was also obtained from the families where both the overlap scores were $\geq$ 0.9, to study the family size distribution of families that are consistently detected by both family building algorithms. The distribution shows that consist families are selected from all types of family sizes and not any particular family size.
+		
 		\begin{figure}[h!]
 			\fbox{\includegraphics[width=\linewidth]{figures/hist_seq_ct_lgf5_vs_orthofinder_90percent_overlap.png}}
-			\caption{Distribution of ingroup sequence counts for lgf5 families with both overlaps scores $\geq$ 0.9 }
+			\caption{Distribution of ingroup sequence counts for Ks-based families with both overlaps scores $\geq$ 0.9 }
 			\label{fig:hist_seq_ct_lgf5_vs_orthofinder_90percent_overlap}
 		\end{figure}
 		

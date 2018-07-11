@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{graphicx}
 \usepackage{array}
+\usepackage{natbib}
 \usepackage[margin=1in]{geometry}
 \date{}
 \makeatletter
@@ -21,21 +22,21 @@
 	
 	\section{Introduction}
 		\subsection{Gene families}
-		Gene families or orthologous groups - with respect to a given set of species - are clusters of genes that have originated from a single ancestral gene present in the common ancestor of the given set of species. Therefore, gene families contain genes that have diverged due to speciation or duplication after the divergence node of earliest diverging species. Accordingly, genes within the families are either orthologs or in-paralogs (duplication after the common ancestral node) (Fitch 1970, 2000; Sonnhammer and Koonin, 2002). Gene families are mainly used to infer orthology and paralogy among genes from the given set of species.
+		Gene families or orthologous groups - with respect to a given set of species - are clusters of genes that have originated from a single ancestral gene present in the common ancestor of the given set of species. Therefore, gene families contain genes that have diverged due to speciation or duplication after the divergence node of earliest diverging species. Accordingly, genes within the families are either orthologs or in-paralogs (duplication after the common ancestral node) \citep{fitch1970distinguishing,fitch2000homology, sonnhammer2002orthology}. Gene families are mainly used to infer orthology and paralogy among genes from the given set of species.
 		
-		Clustering genes into families helps in capturing evolutionary information from multiple species for studying the divergence or conservation of particular biological functions, with respect to given set of species. Gene families can also be used for identification of candidates drug/vaccine development in case of parasites like \textit{Plasmodium falciparum} which causes malaria in humans (Gardner et al. 2002; Kissinger et al. 2002; Bahl et al. 2003). Gene families have also been used for annotation of newly sequenced genomes and for anti-bacterial drug development by cross-referencing functional information from multiple species (Tatusov et al. 1997; Galperin and Koonin 1999; Natale et al. 2000a,b; Forterre 2002)
+		Clustering genes into families helps in capturing evolutionary information from multiple species for studying the divergence or conservation of particular biological functions, with respect to given set of species. Gene families can also be used for identification of candidates drug/vaccine development in case of parasites like \textit{Plasmodium falciparum} which causes malaria in humans \citep{gardner2002genome,kissinger2002plasmodium,whetzel2005plasmodb}. Gene families have also been used for annotation of newly sequenced genomes and for anti-bacterial drug development by cross-referencing functional information from multiple species \citep{tatusov1997genomic,galperin1999searching,natale2000towards,natale2000using,forterre2002hot}
 		
 		\subsection{Improving and characterizing gene families}
-		Clusters of Orthologous Groups (COG) database is one of the earliest widely-used collection of gene families (Tatusov et al. 2000, 2001). The orthologous groups in the COG database were identified based on reciprocal best hits from all-against-all BLAST searches using complete proteomes from five major lineages - Gram-negative bacteria, Gram-positive bacteria, Cyanbacteria, Archea, and Eukarya. Existing family building algorithms can be divided into 2 main categories viz: BLAST/alignment statistics based clustering approaches and tree based approaches. The BLAST based clustering approaches either operate on individual pairs of species and then expand to multiple species - for example MultiParanoid (Inparanoid), OMA (Alexeyenko et. al 2006; Remm et. al. 2001 ;Roth et. al. 2008; Altenhoff et. al. 2011) - or attempt to infer families directly from multiple species with the common ancestor of given set of species as a reference;  OrthoMCL, OrthoFinder (Li et. al. 2003; Emms et.al. 2015). Tree-based methods compare the gene trees with the species trees using tree reconciliation methods for building gene families (Li et. al. 2006; Van der Heijden et. al. 2007; Wapinski et. al. 2007; Hubbard et. al. 2006; Dehal et. al. 2006).
+		Clusters of Orthologous Groups (COG) database is one of the earliest widely-used collection of gene families \citep{tatusov2000cog,tatusov2001cog}. The orthologous groups in the COG database were identified based on reciprocal best hits from all-against-all BLAST searches using complete proteomes from five major lineages - Gram-negative bacteria, Gram-positive bacteria, Cyanbacteria, Archea, and Eukarya. Existing family building algorithms can be divided into 2 main categories viz: BLAST/alignment statistics based clustering approaches and tree based approaches. The BLAST based clustering approaches either operate on individual pairs of species and then expand to multiple species - for example MultiParanoid (Inparanoid), OMA \citep{alexeyenko2006automatic,remm2001automatic,roth2008algorithm,altenhoff2010oma} - or attempt to infer families directly from multiple species with the common ancestor of given set of species as a reference;  OrthoMCL, OrthoFinder \citep{li2003orthomcl,emms2015orthofinder}. Tree-based methods compare the gene trees with the species trees using tree reconciliation methods for building gene families \citep{li2006treefam,van2007orthology,wapinski2007automatic,hubbard2006ensembl,dehal2006phylogenomic}.
 		  
 		 While many of the families produced by existing methods may be "correct", many non-optimal families could be produced due to under-clustering or over-clustering. Under-clustered families are those families that may have been fragmented by the clustering method (missing sequences). Over-clustered families are those families that may been produced due to merging of two or more closely related families. Also, a significant number of sequences can remain un-clustered and could be wrongly considered as singletons or orphan genes. 
 		
 		Therefore, it is important to analyze and assess the accuracy of families constructed using any method. Here, I propose a suite of methods and tools for improving under-clustered/over-clustered gene families, and for characterizing true and consistent families.
 		
 		\subsection{Gene families in legumes}
-		The legume family (Fabaceae) consists of 750 genera and 19,500 species of flowering plants making the family the third largest family of flowering plants (Lewis et al. 2005). The family is broadly divided into four major lineages viz. Papilionoideae, Mimosoideae-Cassiinae-Caesalpinieae (MCC), Detarieae and Cercideae, out of which the Papilionoideae is the largest. The Papilionoid sub-family includes species like \textit{Arachis hypogaea} (cultivated peanut), \textit{Cajanus cajan} (pigeonpea), \textit{Cicer arietinum} (chickpea), \textit{Glycine max} (soybean), \textit{Lotus japonicus} (Lotus), \textit{Lupinus angustifolius} (narrow-leafed lupin), \textit{Medicago truncatula} (barrel medic), \textit{Phaseolus vulgaris} (common bean), \textit{Trifolium pratense} (red clover), \textit{Vigna angularis} (adzuki bean), \textit{Vigna radiata} (mungbean) and \textit{Vigna unguiculata} (Cowpea).
+		The legume family (Fabaceae) consists of 750 genera and 19,500 species of flowering plants making the family the third largest family of flowering plants\citep{lewis2005legumes}. The family is broadly divided into four major lineages viz. Papilionoideae, Mimosoideae-Cassiinae-Caesalpinieae (MCC), Detarieae and Cercideae, out of which the Papilionoideae is the largest. The Papilionoid sub-family includes species like \textit{Arachis hypogaea} (cultivated peanut), \textit{Cajanus cajan} (pigeonpea), \textit{Cicer arietinum} (chickpea), \textit{Glycine max} (soybean), \textit{Lotus japonicus} (Lotus), \textit{Lupinus angustifolius} (narrow-leafed lupin), \textit{Medicago truncatula} (barrel medic), \textit{Phaseolus vulgaris} (common bean), \textit{Trifolium pratense} (red clover), \textit{Vigna angularis} (adzuki bean), \textit{Vigna radiata} (mungbean) and \textit{Vigna unguiculata} (Cowpea).
 		
-		An ancient Whole Genome Duplication (WGD) occurred in common ancestor of the Papilionoid sub-family around 55 Ma. (Blanc and Wolfe 2004; Schlueter et al. 2004; Pfeil et al. 2005; Cannon et al. 2006; Bertioli et al. 2009; Cannon et. al. 2014). In addition, the Glycine and Lupin lineages have also undergone independent lineage specific WGDs (Cannon et. 2014; Kroc et. al 2014) 
+		An ancient Whole Genome Duplication (WGD) occurred in common ancestor of the Papilionoid sub-family around 55 Ma. \citep{blanc2004functional,schlueter2004mining,pfeil2005placing,cannon2006legume,bertioli2009analysis,cannon2014multiple}. In addition, the Glycine and Lupin lineages have also undergone independent lineage specific WGDs \citep{cannon2014multiple} (Kroc et al. 2014) 
 		
 		Approximately 17k-18k gene families were obtained using a Ks-based (synonymous substitutions per site) family building procedure from the Papilionoid species proteomes. Additionally, for comparison, a different set of 20k families was also obtained from Papilionoid species using the OthroFinder method (Emms et.al. 2015).
 		
@@ -58,7 +59,7 @@
 			\subsubsection{Family searching and collecting closest non-family sequences}
 			All the sequences from any given family are searched against the combined database of all proteomes from all the species under study (the sequence space). With each family sequence as query, all the hits that match the query better than the worst matching family hit (other than the query) are collected into a list. A combined list of hits, using each family sequence as a query, is obtained which is expected to contain both family and non-family sequences (Figure ~\ref{fig:collecting_non_fam_seqs}).
 			
-			The phmmer program from HMMER package (Eddy, S., 1992) is used for searching families against the sequence space database. The ranking of hits for finding the worst matching family hit is the same ranking given by the phmmer search results. 
+			The phmmer program from HMMER package \citep{eddy1992hmmer} is used for searching families against the sequence space database. The ranking of hits for finding the worst matching family hit is the same ranking given by the phmmer search results. 
 			\begin{figure}
 				\fbox{\includegraphics[width=\linewidth]{figures/collecting_non_fam_seqs.png}}
 				\caption{Collecting closest non-family sequences}
@@ -77,7 +78,7 @@
 			\subsubsection{Model building and assessing classification performance}
 			HMM based pair classification models are built to classify the family and non-family pairs, and 10 iterations of repeated test-train split strategy are used to assess the classification performance (Figure ~\ref{fig:train_classify1}). For each iteration, the set of family+non-family pairs are randomly split into training and test split. The pair classification model is trained on the training split and tested on the unseen test split. To train the HMM model on positive pairs in the training split, consensus sequences of the positive pairs are used. To test the model on pairs in the test split, individual sequences of the pairs are first aligned to the trained HMM model and alignment scores for both the sequences are obtained. The test pair is predicted as a positive pair if both the alignment scores are greater than or equal to a specified score cutoff.
 			
-			The Precision-Recall (PR) curve for the positive class is obtained using the combined predictions from all the 10 test-train split iterations. The test pair alignment scores from all the iterations are consolidated (Figure ~\ref{fig:train_classify2}) and used for calculating precision (TP/TP+FP), recall (TP/TP+FN) and F1-score (harmonic mean: 2*(precision*recall)/(precision+recall)) values for specified score cutoffs, where TP, FP and FN are the number True Positive, False Positive and False Negative pairs, respectively. Different precision and recall values are obtained for a range of score cutoffs starting from most stringent to least stringent. The precision values are plotted against the recall values to obtain the PR-curve (Davis et. al 2006). The area under the PR-curve (PR-AUC) is calculated using the trapezoidal rule. Other classification metrics such as the precision and recall values observed at the best F1-score and the score cutoff which gives the best F1-score are also reported. The lowest score observed for the positive class is also reported as the lowest score cutoff with respect to the given family. 
+			The Precision-Recall (PR) curve for the positive class is obtained using the combined predictions from all the 10 test-train split iterations. The test pair alignment scores from all the iterations are consolidated (Figure ~\ref{fig:train_classify2}) and used for calculating precision (TP/TP+FP), recall (TP/TP+FN) and F1-score (harmonic mean: 2*(precision*recall)/(precision+recall)) values for specified score cutoffs, where TP, FP and FN are the number True Positive, False Positive and False Negative pairs, respectively. Different precision and recall values are obtained for a range of score cutoffs starting from most stringent to least stringent. The precision values are plotted against the recall values to obtain the PR-curve \citep{davis2006relationship}. The area under the PR-curve (PR-AUC) is calculated using the trapezoidal rule. Other classification metrics such as the precision and recall values observed at the best F1-score and the score cutoff which gives the best F1-score are also reported. The lowest score observed for the positive class is also reported as the lowest score cutoff with respect to the given family. 
 			
 			An example of PR-curve plot for a hypothetical gene family is shown in Figure ~\ref{fig:test_PR-curve}. Each point on the curve corresponds to an alignment score cutoff with score cutoffs decreasing from left to right. The highest score cutoffs on the left produce classifications with highest precision (low FP) but lowest recall (high FN). Conversely, lowest score cutoffs on the right produce classifications with lowest precision but highest recall. An F1-score can be calculated for each point (precision, recall) on the curve as the harmonic mean of precision and the corresponding recall value. The point on the curve with the highest F1-score is the point where optimal values of precision and recall exist. This point represents the best classification performance for the family and the corresponding alignment score is the score cutoff that gives the best classification performance for the family.
 			
@@ -103,7 +104,7 @@
 			Candidate missing sequences for every family are predicted using the non-family pairs. All the non-family pairs where the scores for both the sequences of a pair are greater than the best/lowest score cutoff are re-classified as positive pairs. Unique sequences within these reclassified positive pairs are predicted and reported as candidate missing sequences for the family.
 			
 		\subsection{Preliminary results}
-		The pair classification based scoring was tested on 4796 yeast families from the Yeast Gene Order Browser (YGOB) database (Byrne et. al. 2005). Since the YGOB families are built through manual curation using synteny based evidence, they were assumed to be true. To check if the quality assessment workflow is assigning high quality scores to all the true families, the distribution of the PR-AUCs for all the 4796 yeast families was obtained (Figure ~\ref{fig:hist_pr-auc_true_ygob}). As expected the distribution of PR-AUCs is highly skewed towards PR-AUC value = 1.0 with 92\% of family classifiers having values $\geq$ 0.75. This shows that the method correctly recognizes good quality families and assigns high quality scores to them.
+		The pair classification based scoring was tested on 4796 yeast families from the Yeast Gene Order Browser (YGOB) database \citep{byrne2005yeast}. Since the YGOB families are built through manual curation using synteny based evidence, they were assumed to be true. To check if the quality assessment workflow is assigning high quality scores to all the true families, the distribution of the PR-AUCs for all the 4796 yeast families was obtained (Figure ~\ref{fig:hist_pr-auc_true_ygob}). As expected the distribution of PR-AUCs is highly skewed towards PR-AUC value = 1.0 with 92\% of family classifiers having values $\geq$ 0.75. This shows that the method correctly recognizes good quality families and assigns high quality scores to them.
 		
 		\begin{figure}
 			\fbox{\includegraphics[width=\linewidth]{figures/hist_pr-auc_true_ygob.png}}
@@ -341,15 +342,15 @@
 				\hline
 				GO id & P-value & GO description \\
 				\hline\hline
-				GO:0009816 & e-09 & defense response to bacterium, incompatible interaction \\ 
+				GO:0009816 & $10^{-09}$ & defense response to bacterium, incompatible interaction \\ 
 				\hline
-				GO:0010026 & e-05 & trichome differentiation \\
+				GO:0010026 & $10^{-05}$ & trichome differentiation \\
 				\hline
-				GO:0006355 & e-04 & regulation of transcription, DNA-dependent \\
+				GO:0006355 & $10^{-04}$ & regulation of transcription, DNA-dependent \\
 				\hline
-				GO:0015690 & e-03 & aluminum cation transport \\
+				GO:0015690 & $10^{-03}$ & aluminum cation transport \\
 				\hline
-				GO:0009612 & e-02 & response to mechanical stimulus \\ 
+				GO:0009612 & $10^{-02}$ & response to mechanical stimulus \\ 
 				\hline
 			\end{tabular}
 			\caption{GO enrichment for Group 1 soybean genes}
@@ -362,15 +363,15 @@
 				\hline
 				GO id & P-value & GO description \\
 				\hline\hline
-				GO:0009658 & e-45 & chloroplast organization \\ 
+				GO:0009658 & $10^{-45}$ & chloroplast organization \\ 
 				\hline
-				GO:0010027 & e-45 & thylakoid membrane organization \\
+				GO:0010027 & $10^{-45}$ & thylakoid membrane organization \\
 				\hline
-				GO:0019288 & e-40 & isopentenyl diphosphate biosynthetic process \\
+				GO:0019288 & $10^{-40}$ & isopentenyl diphosphate biosynthetic process \\
 				\hline
-				GO:0006364 & e-37 & rRNA processing \\
+				GO:0006364 & $10^{-37}$ & rRNA processing \\
 				\hline
-				GO:0019252 & e-35 & starch biosynthetic process \\ 
+				GO:0019252 & $10^{-35}$ & starch biosynthetic process \\ 
 				\hline
 			\end{tabular}
 			\caption{GO enrichment for Group 2 subset soybean genes}
@@ -383,15 +384,15 @@
 				\hline
 				GO id & P-value & GO description \\
 				\hline\hline
-				GO:0006355 & e-92 & regulation of transcription, DNA-dependent \\ 
+				GO:0006355 & $10^{-92}$ & regulation of transcription, DNA-dependent \\ 
 				\hline
-				GO:0006468 & e-25 & protein phosphorylation \\
+				GO:0006468 & $10^{-25}$ & protein phosphorylation \\
 				\hline
-				GO:0010200 & e-21 & response to chitin \\
+				GO:0010200 & $10^{-21}$ & response to chitin \\
 				\hline
-				GO:0010075 & e-20 & regulation of meristem growth \\
+				GO:0010075 & $10^{-20}$ & regulation of meristem growth \\
 				\hline
-				GO:0009651 & e-19 & response to salt stress \\ 
+				GO:0009651 & $10^{-19}$ & response to salt stress \\ 
 				\hline
 			\end{tabular}
 			\caption{GO enrichment for Group 3 soybean genes}
@@ -404,15 +405,15 @@
 				\hline
 				GO id & P-value & GO description \\
 				\hline\hline
-				GO:0006952 & e-191 & defense response \\ 
+				GO:0006952 & $10^{-191}$ & defense response \\ 
 				\hline
-				GO:0007165 & e-66 & signal transduction \\
+				GO:0007165 & $10^{-66}$ & signal transduction \\
 				\hline
-				GO:0006412 & e-54 & translation \\
+				GO:0006412 & $10^{-54}$ & translation \\
 				\hline
-				GO:0055114 & e-41 & oxidation-reduction process \\
+				GO:0055114 & $10^{-41}$ & oxidation-reduction process \\
 				\hline
-				GO:0006865 & e-40 & amino acid transport \\ 
+				GO:0006865 & $10^{-40}$ & amino acid transport \\ 
 				\hline
 			\end{tabular}
 			\caption{GO enrichment for Group 4 soybean genes}
@@ -420,97 +421,9 @@
 		\end{table}
 
 	\pagebreak
-	\section*{References}
-		\begin{itemize}
-			\item Fitch, W.M. 1970. Distinguishing homologous from analogous proteins. Syst. Zool. 19: 99–113
-			
-			\item Fitch, W.M. 2000. Homology, a personal view on some of the problems. Trends Genet. 16: 227–231
-			
-			\item Sonnhammer,E.L.L. and Koonin,E.V. (2002) Orthology, paralogy and proposed classification for paralog subtypes.Trends Genet.18, 619-620.
-			
-			\item Gardner, M.J., Hall, N., Fung, E., White, O., Berriman, M., Hyman, R.W., Carlton, J.M., Pain, A., Nelson, K.E., Bowman, S., et al. 2002. Genome sequence of the human malaria parasite Plasmodium falciparum. Nature 419: 498–511.
-			
-			\item Kissinger, J.C., Brunk, B.P., Crabtree, J., Fraunholz, M.J., Gajria, B., Milgram, A.J., Pearson, D.S., Schug, J., Bahl, A., Diskin, S.J., et al. 2002. The Plasmodium genome database. Nature 419: 490–492.
-			
-			\item Bahl, A., Brunk, B., Crabtree, J., Fraunholz, M.J., Gajria, B., Grant, G.R., Ginsburg, H., Gupta, D., Kissinger, J.C., Labo, P., et al. 2003. PlasmoDB: The Plasmodium Genome Resource. A database integrating experimental and computational data. Nucleic Acids Res. 31: 212–215.
-			
-			\item Tatusov, R.L., Koonin, E.V., and Lipman, D.J. 1997. A genomic perspective on protein families. Science 278: 631–637.
-			
-			\item Galperin, M.Y. and Koonin, E.V. 1999. Searching for drug targets in microbial genomes. Curr. Opin. Biotechnol. 10: 571–578.
-			
-			\item Natale, D.A., Galperin, M.Y., Tatusov, R.L., and Koonin, E.V. 2000a. Using the COG database to improve gene recognition in complete genomes. Genetica 108: 9–17.
-			
-			\item Natale, D.A., Shankavaram, U.T., Galperin, M.Y., Wolf, Y.I., Aravind, L., and Koonin, E.V. 2000b. Towards understanding the first genome sequence of a crenarchaeon by genome annotation using clusters of orthologous groups of proteins (COGs). Genome Biol. 1: research0009.1–0009.19.
-			
-			\item Forterre, P. 2002. A hot story from comparative genomics: Reverse gyrase is the only hyperthermophile-specific protein. Trends Genet. 18: 236–237.
-			
-			\item Tatusov, R.L., Galperin, M.Y., Natale, D.A., and Koonin, E.V. 2000. The COG database: A tool for genome-scale analysis of protein functions and evolution. Nucleic Acids Res. 28: 33–36.
-			
-			\item Tatusov, R.L., Natale, D.A., Garkavtsev, I.V., Tatusova, T.A., Shankavaram, U.T., Rao, B.S., Kiryutin, B., Galperin, M.Y., Fedorova, N.D., and Koonin, E.V. 2001. The COG database: New developments in phylogenetic classification of proteins from complete genomes. Nucleic Acids Res. 29: 22–28.
-			
-			\item Alexeyenko, A., Tamas, I., Liu, G. and Sonnhammer, E.L., 2006. Automatic clustering of orthologs and inparalogs shared by multiple proteomes. Bioinformatics, 22(14), pp.e9-e15.
-			
-			\item Remm, M., Storm, C.E. and Sonnhammer, E.L., 2001. Automatic clustering of orthologs and in-paralogs from pairwise species comparisons. Journal of molecular biology, 314(5), pp.1041-1052.
-			
-			\item Roth, A.C., Gonnet, G.H. and Dessimoz, C., 2008. Algorithm of OMA for large-scale orthology inference. BMC bioinformatics, 9(1), p.518.
-			
-			\item Altenhoff AM, Schneider A, Gonnet GH, Dessimoz C. OMA 2011: orthology inference among 1000 complete genomes. Nucleic Acids Res. 2011;39:D289–94.
-			
-			\item Li, L., Stoeckert, C.J. and Roos, D.S., 2003. OrthoMCL: identification of ortholog groups for eukaryotic genomes. Genome research, 13(9), pp.2178-2189.
-			
-			\item Emms, D.M. and Kelly, S., 2015. OrthoFinder: solving fundamental biases in whole genome comparisons dramatically improves orthogroup inference accuracy. Genome biology, 16(1), p.157.
-			
-			\item Lewis, G.P., 2005. Legumes of the World. Royal Botanic Gardens Kew.
-			
-			\item Blanc, G. and Wolfe, K.H., 2004. Functional divergence of duplicated genes formed by polyploidy during Arabidopsis evolution. The Plant Cell, 16(7), pp.1679-1691.
-			
-			\item Schlueter, J.A., Dixon, P., Granger, C., Grant, D., Clark, L., Doyle, J.J. and Shoemaker, R.C., 2004. Mining EST databases to resolve evolutionary events in major crop species. Genome, 47(5), pp.868-876.
-			
-			\item Pfeil, B.E., Schlueter, J.A., Shoemaker, R.C. and Doyle, J.J., 2005. Placing paleopolyploidy in relation to taxon divergence: a phylogenetic analysis in legumes using 39 gene families. Systematic Biology, 54(3), pp.441-454.
-			
-			\item Cannon, S.B., Sterck, L., Rombauts, S., Sato, S., Cheung, F., Gouzy, J., Wang, X., Mudge, J., Vasdewani, J., Schiex, T. and Spannagl, M., 2006. Legume genome evolution viewed through the Medicago truncatula and Lotus japonicus genomes. Proceedings of the National Academy of Sciences, 103(40), pp.14959-14964.
-			
-			\item Bertioli, D.J., Moretzsohn, M.C., Madsen, L.H., Sandal, N., Leal-Bertioli, S.C., Guimarães, P.M., Hougaard, B.K., Fredslund, J., Schauser, L., Nielsen, A.M. and Sato, S., 2009. An analysis of synteny of Arachis with Lotus and Medicago sheds new light on the structure, stability and evolution of legume genomes. BMC genomics, 10(1), p.45.
-			
-			\item Cannon, S.B., McKain, M.R., Harkess, A., Nelson, M.N., Dash, S., Deyholos, M.K., Peng, Y., Joyce, B., Stewart Jr, C.N., Rolf, M. and Kutchan, T., 2014. Multiple polyploidy events in the early radiation of nodulating and nonnodulating legumes. Molecular biology and evolution, 32(1), pp.193-210.
-			
-			\item Kroc, M., Koczyk, G., Święcicki, W., Kilian, A. and Nelson, M.N., 2014. New evidence of ancestral polyploidy in the Genistoid legume Lupinus angustifolius L.(narrow-leafed lupin). Theoretical and applied genetics, 127(5), pp.1237-1249.
-			
-			\item Eddy, S., 1992. HMMER user’s guide. Department of Genetics, Washington University School of Medicine, 2(1).
-			
-			\item Davis, J. and Goadrich, M., 2006, June. The relationship between Precision-Recall and ROC curves. In Proceedings of the 23rd international conference on Machine learning (pp. 233-240). ACM.
-			
-			\item Byrne, K.P. and Wolfe, K.H., 2005. The Yeast Gene Order Browser: combining curated homology and syntenic context reveals gene fate in polyploid species. Genome research, 15(10), pp.1456-1461.
-			
-			\item Li, H., Coghlan, A., Ruan, J., Coin, L.J., Heriche, J.K., Osmotherly, L., Li, R., Liu, T., Zhang, Z., Bolund, L. and Wong, G.K.S., 2006. TreeFam: a curated database of phylogenetic trees of animal gene families. Nucleic acids research, 34(suppl\_1), pp.D572-D580
-			
-			\item Van der Heijden, R.T., Snel, B., Van Noort, V. and Huynen, M.A., 2007. Orthology prediction at scalable resolution by phylogenetic tree analysis. BMC bioinformatics, 8(1), p.83.
-			
-			
-			\item Wapinski, I., Pfeffer, A., Friedman, N. and Regev, A., 2007. Automatic genome-wide reconstruction of phylogenetic gene trees. Bioinformatics, 23(13), pp.i549-i558.
-			
-			\item Hubbard, T.J., Aken, B.L., Beal, K., Ballester, B., Cáccamo, M., Chen, Y., Clarke, L., Coates, G., Cunningham, F., Cutts, T. and Down, T., 2006. Ensembl 2007. Nucleic acids research, 35(suppl\_1), pp.D610-D617.
-			
-			\item Dehal, P.S. and Boore, J.L., 2006. A phylogenomic gene cluster resource: the Phylogenetically Inferred Groups (PhIGs) database. BMC bioinformatics, 7(1), p.201.
-			
-			\item Finn, R.D., Tate, J., Mistry, J., Coggill, P.C., Sammut, S.J., Hotz, H.R., Ceric, G., Forslund, K., Eddy, S.R., Sonnhammer, E.L. and Bateman, A., 2007. The Pfam protein families database. Nucleic acids research, 36(suppl\_1), pp.D281-D288.
-			
-			\item Falquet, L., Pagni, M., Bucher, P., Hulo, N., Sigrist, C.J., Hofmann, K. and Bairoch, A., 2002. The PROSITE database, its status in 2002. Nucleic acids research, 30(1), pp.235-238.
-			Letunic, I., Doerks, T. and Bork, P., 2011. SMART 7: recent updates to the protein domain annotation resource. Nucleic acids research, 40(D1), pp.D302-D305.
-			
-			\item Marchler-Bauer, A., Lu, S., Anderson, J.B., Chitsaz, F., Derbyshire, M.K., DeWeese-Scott, C., Fong, J.H., Geer, L.Y., Geer, R.C., Gonzales, N.R. and Gwadz, M., 2010. CDD: a Conserved Domain Database for the functional annotation of proteins. Nucleic acids research, 39(suppl\_1), pp.D225-D229.
-			
-			\item Song, N., Sedgewick, R.D. and Durand, D., 2007. Domain architecture comparison for multidomain homology identification. Journal of Computational Biology, 14(4), pp.496-516.
-			
-			\item Bitard-Feildel, T., Kemena, C., Greenwood, J.M. and Bornberg-Bauer, E., 2015. Domain similarity based orthology detection. BMC bioinformatics, 16(1), p.154.
-			
-			\item Mistry, J., Bateman, A. and Finn, R.D., 2007. Predicting active site residue annotations in the Pfam database. BMC bioinformatics, 8(1), p.298.
-			
-			\item Grant, D., Nelson, R.T., Cannon, S.B. and Shoemaker, R.C., 2009. SoyBase, the USDA-ARS soybean genetics and genomics database. Nucleic acids research, 38(suppl\_1), pp.D843-D846.
-			
-		\end{itemize}
 	
-	
+	\bibliography{references/ref.bib}
+	\bibliographystyle{apalike}
 	
 	
 \end{document}

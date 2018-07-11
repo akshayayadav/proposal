@@ -1,0 +1,210 @@
+\begin{thebibliography}{}
+
+\bibitem[Alexeyenko et~al., 2006]{alexeyenko2006automatic}
+Alexeyenko, A., Tamas, I., Liu, G., and Sonnhammer, E.~L. (2006).
+\newblock Automatic clustering of orthologs and inparalogs shared by multiple
+  proteomes.
+\newblock {\em Bioinformatics}, 22(14):e9--e15.
+
+\bibitem[Altenhoff et~al., 2010]{altenhoff2010oma}
+Altenhoff, A.~M., Schneider, A., Gonnet, G.~H., and Dessimoz, C. (2010).
+\newblock Oma 2011: orthology inference among 1000 complete genomes.
+\newblock {\em Nucleic acids research}, 39(suppl\_1):D289--D294.
+
+\bibitem[Bertioli et~al., 2009]{bertioli2009analysis}
+Bertioli, D.~J., Moretzsohn, M.~C., Madsen, L.~H., Sandal, N., Leal-Bertioli,
+  S.~C., Guimar{\~a}es, P.~M., Hougaard, B.~K., Fredslund, J., Schauser, L.,
+  Nielsen, A.~M., et~al. (2009).
+\newblock An analysis of synteny of arachis with lotus and medicago sheds new
+  light on the structure, stability and evolution of legume genomes.
+\newblock {\em BMC genomics}, 10(1):45.
+
+\bibitem[Blanc and Wolfe, 2004]{blanc2004functional}
+Blanc, G. and Wolfe, K.~H. (2004).
+\newblock Functional divergence of duplicated genes formed by polyploidy during
+  arabidopsis evolution.
+\newblock {\em The Plant Cell}, 16(7):1679--1691.
+
+\bibitem[Byrne and Wolfe, 2005]{byrne2005yeast}
+Byrne, K.~P. and Wolfe, K.~H. (2005).
+\newblock The yeast gene order browser: combining curated homology and syntenic
+  context reveals gene fate in polyploid species.
+\newblock {\em Genome research}, 15(10):1456--1461.
+
+\bibitem[Cannon et~al., 2014]{cannon2014multiple}
+Cannon, S.~B., McKain, M.~R., Harkess, A., Nelson, M.~N., Dash, S., Deyholos,
+  M.~K., Peng, Y., Joyce, B., Stewart~Jr, C.~N., Rolf, M., et~al. (2014).
+\newblock Multiple polyploidy events in the early radiation of nodulating and
+  nonnodulating legumes.
+\newblock {\em Molecular biology and evolution}, 32(1):193--210.
+
+\bibitem[Cannon et~al., 2006]{cannon2006legume}
+Cannon, S.~B., Sterck, L., Rombauts, S., Sato, S., Cheung, F., Gouzy, J., Wang,
+  X., Mudge, J., Vasdewani, J., Schiex, T., et~al. (2006).
+\newblock Legume genome evolution viewed through the medicago truncatula and
+  lotus japonicus genomes.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  103(40):14959--14964.
+
+\bibitem[Davis and Goadrich, 2006]{davis2006relationship}
+Davis, J. and Goadrich, M. (2006).
+\newblock The relationship between precision-recall and roc curves.
+\newblock In {\em Proceedings of the 23rd international conference on Machine
+  learning}, pages 233--240. ACM.
+
+\bibitem[Dehal and Boore, 2006]{dehal2006phylogenomic}
+Dehal, P.~S. and Boore, J.~L. (2006).
+\newblock A phylogenomic gene cluster resource: the phylogenetically inferred
+  groups (phigs) database.
+\newblock {\em BMC bioinformatics}, 7(1):201.
+
+\bibitem[Eddy, 1992]{eddy1992hmmer}
+Eddy, S. (1992).
+\newblock Hmmer user’s guide.
+\newblock {\em Department of Genetics, Washington University School of
+  Medicine}, 2(1).
+
+\bibitem[Emms and Kelly, 2015]{emms2015orthofinder}
+Emms, D.~M. and Kelly, S. (2015).
+\newblock Orthofinder: solving fundamental biases in whole genome comparisons
+  dramatically improves orthogroup inference accuracy.
+\newblock {\em Genome biology}, 16(1):157.
+
+\bibitem[Fitch, 1970]{fitch1970distinguishing}
+Fitch, W.~M. (1970).
+\newblock Distinguishing homologous from analogous proteins.
+\newblock {\em Systematic zoology}, 19(2):99--113.
+
+\bibitem[Fitch, 2000]{fitch2000homology}
+Fitch, W.~M. (2000).
+\newblock Homology: a personal view on some of the problems.
+\newblock {\em Trends in genetics}, 16(5):227--231.
+
+\bibitem[Forterre, 2002]{forterre2002hot}
+Forterre, P. (2002).
+\newblock A hot story from comparative genomics: reverse gyrase is the only
+  hyperthermophile-specific protein.
+\newblock {\em Trends in Genetics}, 18(5):236--237.
+
+\bibitem[Galperin and Koonin, 1999]{galperin1999searching}
+Galperin, M.~Y. and Koonin, E.~V. (1999).
+\newblock Searching for drug targets in microbial genomes.
+\newblock {\em Current opinion in biotechnology}, 10(6):571--578.
+
+\bibitem[Gardner et~al., 2002]{gardner2002genome}
+Gardner, M.~J., Hall, N., Fung, E., White, O., Berriman, M., Hyman, R.~W.,
+  Carlton, J.~M., Pain, A., Nelson, K.~E., Bowman, S., et~al. (2002).
+\newblock Genome sequence of the human malaria parasite plasmodium falciparum.
+\newblock {\em Nature}, 419(6906):498.
+
+\bibitem[Hubbard et~al., 2006]{hubbard2006ensembl}
+Hubbard, T.~J., Aken, B.~L., Beal, K., Ballester, B., C{\'a}ccamo, M., Chen,
+  Y., Clarke, L., Coates, G., Cunningham, F., Cutts, T., et~al. (2006).
+\newblock Ensembl 2007.
+\newblock {\em Nucleic acids research}, 35(suppl\_1):D610--D617.
+
+\bibitem[Kissinger et~al., 2002]{kissinger2002plasmodium}
+Kissinger, J.~C., Brunk, B.~P., Crabtree, J., Fraunholz, M.~J., Gajria, B.,
+  Milgram, A.~J., Pearson, D.~S., Schug, J., Bahl, A., Diskin, S.~J., et~al.
+  (2002).
+\newblock The plasmodium genome database.
+\newblock {\em Nature}, 419(6906):490.
+
+\bibitem[Lewis, 2005]{lewis2005legumes}
+Lewis, G.~P. (2005).
+\newblock {\em Legumes of the World}.
+\newblock Royal Botanic Gardens Kew.
+
+\bibitem[Li et~al., 2006]{li2006treefam}
+Li, H., Coghlan, A., Ruan, J., Coin, L.~J., Heriche, J.-K., Osmotherly, L., Li,
+  R., Liu, T., Zhang, Z., Bolund, L., et~al. (2006).
+\newblock Treefam: a curated database of phylogenetic trees of animal gene
+  families.
+\newblock {\em Nucleic acids research}, 34(suppl\_1):D572--D580.
+
+\bibitem[Li et~al., 2003]{li2003orthomcl}
+Li, L., Stoeckert, C.~J., and Roos, D.~S. (2003).
+\newblock Orthomcl: identification of ortholog groups for eukaryotic genomes.
+\newblock {\em Genome research}, 13(9):2178--2189.
+
+\bibitem[Natale et~al., 2000a]{natale2000using}
+Natale, D., Galperin, M., Tatusov, R., and Koonin, E. (2000a).
+\newblock Using the cog database to improve gene recognition in complete
+  genomes.
+\newblock {\em Genetica}, 108(1):9--17.
+
+\bibitem[Natale et~al., 2000b]{natale2000towards}
+Natale, D.~A., Shankavaram, U.~T., Galperin, M.~Y., Wolf, Y.~I., Aravind, L.,
+  and Koonin, E.~V. (2000b).
+\newblock Towards understanding the first genome sequence of a crenarchaeon by
+  genome annotation using clusters of orthologous groups of proteins (cogs).
+\newblock {\em Genome biology}, 1(5):research0009--1.
+
+\bibitem[Pfeil et~al., 2005]{pfeil2005placing}
+Pfeil, B., Schlueter, J., Shoemaker, R., and Doyle, J. (2005).
+\newblock Placing paleopolyploidy in relation to taxon divergence: a
+  phylogenetic analysis in legumes using 39 gene families.
+\newblock {\em Systematic Biology}, 54(3):441--454.
+
+\bibitem[Remm et~al., 2001]{remm2001automatic}
+Remm, M., Storm, C.~E., and Sonnhammer, E.~L. (2001).
+\newblock Automatic clustering of orthologs and in-paralogs from pairwise
+  species comparisons.
+\newblock {\em Journal of molecular biology}, 314(5):1041--1052.
+
+\bibitem[Roth et~al., 2008]{roth2008algorithm}
+Roth, A.~C., Gonnet, G.~H., and Dessimoz, C. (2008).
+\newblock Algorithm of oma for large-scale orthology inference.
+\newblock {\em BMC bioinformatics}, 9(1):518.
+
+\bibitem[Schlueter et~al., 2004]{schlueter2004mining}
+Schlueter, J.~A., Dixon, P., Granger, C., Grant, D., Clark, L., Doyle, J.~J.,
+  and Shoemaker, R.~C. (2004).
+\newblock Mining est databases to resolve evolutionary events in major crop
+  species.
+\newblock {\em Genome}, 47(5):868--876.
+
+\bibitem[Sonnhammer and Koonin, 2002]{sonnhammer2002orthology}
+Sonnhammer, E.~L. and Koonin, E.~V. (2002).
+\newblock Orthology, paralogy and proposed classification for paralog subtypes.
+\newblock {\em TRENDS in Genetics}, 18(12):619--620.
+
+\bibitem[Tatusov et~al., 2000]{tatusov2000cog}
+Tatusov, R.~L., Galperin, M.~Y., Natale, D.~A., and Koonin, E.~V. (2000).
+\newblock The cog database: a tool for genome-scale analysis of protein
+  functions and evolution.
+\newblock {\em Nucleic acids research}, 28(1):33--36.
+
+\bibitem[Tatusov et~al., 1997]{tatusov1997genomic}
+Tatusov, R.~L., Koonin, E.~V., and Lipman, D.~J. (1997).
+\newblock A genomic perspective on protein families.
+\newblock {\em Science}, 278(5338):631--637.
+
+\bibitem[Tatusov et~al., 2001]{tatusov2001cog}
+Tatusov, R.~L., Natale, D.~A., Garkavtsev, I.~V., Tatusova, T.~A., Shankavaram,
+  U.~T., Rao, B.~S., Kiryutin, B., Galperin, M.~Y., Fedorova, N.~D., and
+  Koonin, E.~V. (2001).
+\newblock The cog database: new developments in phylogenetic classification of
+  proteins from complete genomes.
+\newblock {\em Nucleic acids research}, 29(1):22--28.
+
+\bibitem[Van~der Heijden et~al., 2007]{van2007orthology}
+Van~der Heijden, R.~T., Snel, B., Van~Noort, V., and Huynen, M.~A. (2007).
+\newblock Orthology prediction at scalable resolution by phylogenetic tree
+  analysis.
+\newblock {\em BMC bioinformatics}, 8(1):83.
+
+\bibitem[Wapinski et~al., 2007]{wapinski2007automatic}
+Wapinski, I., Pfeffer, A., Friedman, N., and Regev, A. (2007).
+\newblock Automatic genome-wide reconstruction of phylogenetic gene trees.
+\newblock {\em Bioinformatics}, 23(13):i549--i558.
+
+\bibitem[Whetzel et~al., 2005]{whetzel2005plasmodb}
+Whetzel, P.~L., Date, S.~V., Gajria, K., Fraunholz, M.~J., Gajria, B., Grant,
+  G.~R., Iodice, J., Labo, P.~T., Milgram, A.~J., Stoeckert, C.~J., et~al.
+  (2005).
+\newblock Plasmodb: The plasmodium genome resource.
+\newblock In {\em Molecular Approaches to Malaria}, pages 12--23. American
+  Society of Microbiology.
+
+\end{thebibliography}

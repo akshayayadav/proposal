@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.3)  30 JUN 2018 23:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.22)  11 JUL 2018 18:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -63,6 +63,13 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \extratabsurround=\skip43
 \backup@length=\skip44
 )
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip45
+\bibsep=\skip46
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count88
+)
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
@@ -77,9 +84,9 @@ Package ifvtex Info: VTeX not detected.
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count88
-\Gm@cntv=\count89
-\c@Gm@tempcnt=\count90
+\Gm@cnth=\count89
+\Gm@cntv=\count90
+\c@Gm@tempcnt=\count91
 \Gm@bindingoffset=\dimen107
 \Gm@wd@mp=\dimen108
 \Gm@odd@mp=\dimen109
@@ -93,31 +100,31 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 (./methods-gene-families.aux)
 \openout1 = `methods-gene-families.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count91
+\scratchcounter=\count92
 \scratchdimen=\dimen115
 \scratchbox=\box26
-\nofMPsegments=\count92
-\nofMParguments=\count93
+\nofMPsegments=\count93
+\nofMParguments=\count94
 \everyMPshowfont=\toks17
-\MPscratchCnt=\count94
+\MPscratchCnt=\count95
 \MPscratchDim=\dimen116
-\MPnumerator=\count95
-\makeMPintoPDFobject=\count96
+\MPnumerator=\count96
+\makeMPintoPDFobject=\count97
 \everyMPtoPDFconversion=\toks18
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -198,11 +205,11 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 17.
+(Font)              <12> on input line 18.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 17.
+(Font)              <8> on input line 18.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 17.
+(Font)              <6> on input line 18.
 
 LaTeX Warning: No \author given.
 
@@ -214,10 +221,10 @@ File: figures/collecting_non_fam_seqs.png Graphic file (type png)
 
 <use figures/collecting_non_fam_seqs.png>
 Package pdftex.def Info: figures/collecting_non_fam_seqs.png used on input line
- 63.
+ 64.
 (pdftex.def)             Requested size: 469.75502pt x 345.91147pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 63--64
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 64--65
 [][] 
  []
 
@@ -225,10 +232,10 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 63--64
 File: figures/forming_pairs.png Graphic file (type png)
 
 <use figures/forming_pairs.png>
-Package pdftex.def Info: figures/forming_pairs.png used on input line 72.
+Package pdftex.def Info: figures/forming_pairs.png used on input line 73.
 (pdftex.def)             Requested size: 469.75502pt x 266.33476pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 72--73
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 73--74
 [][] 
  []
 
@@ -237,10 +244,10 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 72--73
 File: figures/train_classify1.png Graphic file (type png)
 
 <use figures/train_classify1.png>
-Package pdftex.def Info: figures/train_classify1.png used on input line 85.
+Package pdftex.def Info: figures/train_classify1.png used on input line 86.
 (pdftex.def)             Requested size: 469.75502pt x 185.38222pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 85--86
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 86--87
 [][] 
  []
 
@@ -248,10 +255,10 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 85--86
 File: figures/train_classify2.png Graphic file (type png)
 
 <use figures/train_classify2.png>
-Package pdftex.def Info: figures/train_classify2.png used on input line 91.
+Package pdftex.def Info: figures/train_classify2.png used on input line 92.
 (pdftex.def)             Requested size: 469.75502pt x 296.33617pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 91--92
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 92--93
 [][] 
  []
 
@@ -259,10 +266,10 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 91--92
 File: figures/test_PR-curve.png Graphic file (type png)
 
 <use figures/test_PR-curve.png>
-Package pdftex.def Info: figures/test_PR-curve.png used on input line 97.
+Package pdftex.def Info: figures/test_PR-curve.png used on input line 98.
 (pdftex.def)             Requested size: 469.75502pt x 351.64595pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 97--98
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 98--99
 [][] 
  []
 
@@ -270,18 +277,18 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 97--98
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 106.
+(Font)              <7> on input line 107.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 106.
+(Font)              <5> on input line 107.
 <figures/hist_pr-auc_true_ygob.png, id=27, 651.18282pt x 493.845pt>
 File: figures/hist_pr-auc_true_ygob.png Graphic file (type png)
 
 <use figures/hist_pr-auc_true_ygob.png>
 Package pdftex.def Info: figures/hist_pr-auc_true_ygob.png used on input line 1
-09.
+10.
 (pdftex.def)             Requested size: 469.75502pt x 356.26138pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 109--110
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 110--111
 [][] 
  []
 
@@ -290,10 +297,10 @@ File: figures/hist_pr-auc_delete_ygob.png Graphic file (type png)
 
 <use figures/hist_pr-auc_delete_ygob.png>
 Package pdftex.def Info: figures/hist_pr-auc_delete_ygob.png used on input line
- 115.
+ 116.
 (pdftex.def)             Requested size: 469.75502pt x 356.26138pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 115--116
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 116--117
 [][] 
  []
 
@@ -305,10 +312,10 @@ File: figures/scatter_pr-auc_true_vs_pr-auc_delete_ygob.png Graphic file (type
 png)
  <use figures/scatter_pr-auc_true_vs_pr-auc_delete_ygob.png>
 Package pdftex.def Info: figures/scatter_pr-auc_true_vs_pr-auc_delete_ygob.png 
-used on input line 125.
+used on input line 126.
 (pdftex.def)             Requested size: 469.75502pt x 356.26138pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 125--126
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 126--127
 [][] 
  []
 
@@ -320,10 +327,10 @@ File: figures/hist_tree_precision_scores_lgf5.png Graphic file (type png)
 
 <use figures/hist_tree_precision_scores_lgf5.png>
 Package pdftex.def Info: figures/hist_tree_precision_scores_lgf5.png used on in
-put line 162.
+put line 163.
 (pdftex.def)             Requested size: 469.75502pt x 356.26138pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 162--163
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 163--164
 [][] 
  []
 
@@ -336,10 +343,10 @@ pt>
 File: figures/scatter_tree_precision_vs_seqct_lgf5.png Graphic file (type png)
  <use figures/scatter_tree_precision_vs_seqct_lgf5.png>
 Package pdftex.def Info: figures/scatter_tree_precision_vs_seqct_lgf5.png used 
-on input line 168.
+on input line 169.
 (pdftex.def)             Requested size: 469.75502pt x 356.26138pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 168--169
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 169--170
 [][] 
  []
 
@@ -352,10 +359,10 @@ pt>
 File: figures/tree_based_quality_type1_L_J5W12Z.png Graphic file (type png)
  <use figures/tree_based_quality_type1_L_J5W12Z.png>
 Package pdftex.def Info: figures/tree_based_quality_type1_L_J5W12Z.png used on 
-input line 177.
+input line 178.
 (pdftex.def)             Requested size: 469.75502pt x 130.95723pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 177--178
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 178--179
 [][] 
  []
 
@@ -368,10 +375,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: figures/tree_based_quality_type2_L_4L11VC.png Graphic file (type png)
  <use figures/tree_based_quality_type2_L_4L11VC.png>
 Package pdftex.def Info: figures/tree_based_quality_type2_L_4L11VC.png used on 
-input line 183.
+input line 184.
 (pdftex.def)             Requested size: 469.75502pt x 176.85197pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 183--184
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 184--185
 [][] 
  []
 
@@ -383,10 +390,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: figures/tree_based_quality_type3_L_4VWLVV.png Graphic file (type png)
 <use figures/tree_based_quality_type3_L_4VWLVV.png>
 Package pdftex.def Info: figures/tree_based_quality_type3_L_4VWLVV.png used on 
-input line 189.
+input line 190.
 (pdftex.def)             Requested size: 469.75502pt x 148.72078pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 189--190
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 190--191
 [][] 
  []
 
@@ -396,13 +403,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [12] [13 <./figures/hist_tree_precision_scores_lgf5.png>] [14 <./figures/scatte
 r_tree_precision_vs_seqct_lgf5.png> <./figures/tree_based_quality_type1_L_J5W12
 Z.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 216.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 217.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 216.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 217.
  [15 <./figures/tree_based_quality_type2_L_4L11VC.png> <./figures/tree_based_qu
 ality_type3_L_4VWLVV.png>]
 <figures/hist_domain_jaccard_scores_lgf5.png, id=78, 651.18282pt x 493.845pt>
@@ -410,10 +417,10 @@ File: figures/hist_domain_jaccard_scores_lgf5.png Graphic file (type png)
 
 <use figures/hist_domain_jaccard_scores_lgf5.png>
 Package pdftex.def Info: figures/hist_domain_jaccard_scores_lgf5.png used on in
-put line 224.
+put line 225.
 (pdftex.def)             Requested size: 469.75502pt x 356.26138pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 224--225
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 225--226
 [][] 
  []
 
@@ -424,10 +431,10 @@ File: figures/scatter_domain_jaccard_vs_seq_ct_lgf5.png Graphic file (type png)
 
  <use figures/scatter_domain_jaccard_vs_seq_ct_lgf5.png>
 Package pdftex.def Info: figures/scatter_domain_jaccard_vs_seq_ct_lgf5.png used
- on input line 232.
+ on input line 233.
 (pdftex.def)             Requested size: 469.75502pt x 356.26138pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 232--233
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 233--234
 [][] 
  []
 
@@ -436,10 +443,10 @@ File: figures/hist_domain_cosine_scores_lgf5.png Graphic file (type png)
 
 <use figures/hist_domain_cosine_scores_lgf5.png>
 Package pdftex.def Info: figures/hist_domain_cosine_scores_lgf5.png used on inp
-ut line 240.
+ut line 241.
 (pdftex.def)             Requested size: 469.75502pt x 356.26138pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 240--241
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 241--242
 [][] 
  []
 
@@ -449,10 +456,10 @@ pt>
 File: figures/scatter_domain_cosine_vs_seq_ct_lgf5.png Graphic file (type png)
  <use figures/scatter_domain_cosine_vs_seq_ct_lgf5.png>
 Package pdftex.def Info: figures/scatter_domain_cosine_vs_seq_ct_lgf5.png used 
-on input line 248.
+on input line 249.
 (pdftex.def)             Requested size: 469.75502pt x 356.26138pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 248--249
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 249--250
 [][] 
  []
 
@@ -463,10 +470,10 @@ File: figures/scatter_domain_cosine_vs_tree_precision_lgf5.png Graphic file (ty
 pe png)
  <use figures/scatter_domain_cosine_vs_tree_precision_lgf5.png>
 Package pdftex.def Info: figures/scatter_domain_cosine_vs_tree_precision_lgf5.p
-ng used on input line 256.
+ng used on input line 257.
 (pdftex.def)             Requested size: 469.75502pt x 356.26138pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 256--257
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 257--258
 [][] 
  []
 
@@ -480,10 +487,10 @@ File: figures/scatter_lgf5_vs_orthofinder_overlap_lgf5.png Graphic file (type p
 ng)
  <use figures/scatter_lgf5_vs_orthofinder_overlap_lgf5.png>
 Package pdftex.def Info: figures/scatter_lgf5_vs_orthofinder_overlap_lgf5.png u
-sed on input line 297.
+sed on input line 298.
 (pdftex.def)             Requested size: 469.75502pt x 356.26138pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 297--298
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 298--299
 [][] 
  []
 
@@ -498,10 +505,10 @@ e (type png)
 
 <use figures/hist_seq_ct_lgf5_vs_orthofinder_90percent_overlap.png>
 Package pdftex.def Info: figures/hist_seq_ct_lgf5_vs_orthofinder_90percent_over
-lap.png used on input line 305.
+lap.png used on input line 306.
 (pdftex.def)             Requested size: 469.75502pt x 356.26138pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 305--306
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 306--307
 [][] 
  []
 
@@ -515,10 +522,10 @@ File: figures/hist_lgf5_family_size_groups.png Graphic file (type png)
 
 <use figures/hist_lgf5_family_size_groups.png>
 Package pdftex.def Info: figures/hist_lgf5_family_size_groups.png used on input
- line 323.
+ line 324.
 (pdftex.def)             Requested size: 469.75502pt x 356.26138pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 323--324
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 324--325
 [][] 
  []
 
@@ -526,7 +533,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 323--324
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [25 <./figures/hist_seq_ct_lgf5_vs_orthofinder_90percent_overlap.png>]
-Overfull \hbox (1.35696pt too wide) in paragraph at lines 336--337
+Overfull \hbox (1.35696pt too wide) in paragraph at lines 337--338
 []\OT1/cmr/m/n/10 Applying do-main based scor-ing on the high-confidence fam-i-
 lies can help in iden-ti-fy-ing slow-evolving/recent
  []
@@ -544,94 +551,35 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [26 <./figures/hist_lgf5_family_size_groups.png (PNG copy)>]
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
- [27]
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
-
-Overfull \hbox (0.23544pt too wide) in paragraph at lines 445--446
-[]\OT1/cmr/m/n/10 Forterre, P. 2002. A hot story from com-par-a-tive ge-nomics:
- Re-verse gy-rase is the only hyperthermophile-
- []
-
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
-
-Overfull \hbox (0.59323pt too wide) in paragraph at lines 449--450
-[]\OT1/cmr/m/n/10 Tatusov, R.L., Na-tale, D.A., Garkavt-sev, I.V., Tatusova, T.
-A., Shankavaram, U.T., Rao, B.S., Kiryutin,
- []
-
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no £ in font cmr10!
-[28]
-Missing character: There is no Å in font cmr10!
-Missing character: There is no š in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ™ in font cmr10!
+(./methods-gene-families.bbl [27]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no ¡ in font cmr10!
- [29] [30] (./methods-gene-families.aux) ) 
+ [28]) [29] (./methods-gene-families.aux) ) 
 Here is how much of TeX's memory you used:
- 2168 strings out of 493029
- 34735 string characters out of 6136235
- 101164 words of memory out of 5000000
- 5673 multiletter control sequences out of 15000+600000
+ 2606 strings out of 493029
+ 41348 string characters out of 6136234
+ 107909 words of memory out of 5000000
+ 6104 multiletter control sequences out of 15000+600000
  8848 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,7n,32p,1558b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on methods-gene-families.pdf (30 pages, 1100620 bytes).
+ 38i,9n,32p,1558b,253s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on methods-gene-families.pdf (29 pages, 1111633 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
+ 179 PDF objects out of 1000 (max. 8388607)
+ 101 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  106 words of extra memory for PDF output out of 10000 (max. 10000000)
 

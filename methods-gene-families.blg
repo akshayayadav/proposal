@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: methods-gene-families.aux
+The style file: apalike.bst
+Database file #1: references/ref.bib.bib
+You've used 34 entries,
+            1935 wiz_defined-function locations,
+            690 strings with 11137 characters,
+and the built_in function-call counts, 16597 in all, are:
+= -- 1565
+> -- 947
+< -- 14
++ -- 359
+- -- 340
+* -- 1601
+:= -- 2908
+add.period$ -- 104
+call.type$ -- 34
+change.case$ -- 331
+chr.to.int$ -- 33
+cite$ -- 34
+duplicate$ -- 499
+empty$ -- 1016
+format.name$ -- 388
+if$ -- 3139
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 35
+newline$ -- 173
+num.names$ -- 102
+pop$ -- 267
+preamble$ -- 1
+purify$ -- 332
+quote$ -- 0
+skip$ -- 379
+stack$ -- 0
+substring$ -- 1168
+swap$ -- 50
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 202
+warning$ -- 0
+while$ -- 127
+width$ -- 0
+write$ -- 445

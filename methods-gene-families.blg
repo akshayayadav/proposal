@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: methods-gene-families.aux
 The style file: apalike.bst
 Database file #1: references/ref.bib.bib
-You've used 34 entries,
+You've used 43 entries,
             1935 wiz_defined-function locations,
-            690 strings with 11137 characters,
-and the built_in function-call counts, 16597 in all, are:
-= -- 1565
-> -- 947
+            736 strings with 13031 characters,
+and the built_in function-call counts, 21196 in all, are:
+= -- 1994
+> -- 1229
 < -- 14
-+ -- 359
-- -- 340
-* -- 1601
-:= -- 2908
-add.period$ -- 104
-call.type$ -- 34
-change.case$ -- 331
-chr.to.int$ -- 33
-cite$ -- 34
-duplicate$ -- 499
-empty$ -- 1016
-format.name$ -- 388
-if$ -- 3139
++ -- 465
+- -- 442
+* -- 2064
+:= -- 3718
+add.period$ -- 131
+call.type$ -- 43
+change.case$ -- 425
+chr.to.int$ -- 42
+cite$ -- 43
+duplicate$ -- 625
+empty$ -- 1288
+format.name$ -- 499
+if$ -- 3997
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 35
-newline$ -- 173
-num.names$ -- 102
-pop$ -- 267
+missing$ -- 44
+newline$ -- 218
+num.names$ -- 129
+pop$ -- 343
 preamble$ -- 1
-purify$ -- 332
+purify$ -- 426
 quote$ -- 0
-skip$ -- 379
+skip$ -- 471
 stack$ -- 0
-substring$ -- 1168
-swap$ -- 50
+substring$ -- 1503
+swap$ -- 59
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 202
+type$ -- 256
 warning$ -- 0
-while$ -- 127
+while$ -- 161
 width$ -- 0
-write$ -- 445
+write$ -- 562

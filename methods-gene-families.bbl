@@ -19,6 +19,12 @@ Bertioli, D.~J., Moretzsohn, M.~C., Madsen, L.~H., Sandal, N., Leal-Bertioli,
   light on the structure, stability and evolution of legume genomes.
 \newblock {\em BMC genomics}, 10(1):45.
 
+\bibitem[Bitard-Feildel et~al., 2015]{bitard2015domain}
+Bitard-Feildel, T., Kemena, C., Greenwood, J.~M., and Bornberg-Bauer, E.
+  (2015).
+\newblock Domain similarity based orthology detection.
+\newblock {\em BMC bioinformatics}, 16(1):154.
+
 \bibitem[Blanc and Wolfe, 2004]{blanc2004functional}
 Blanc, G. and Wolfe, K.~H. (2004).
 \newblock Functional divergence of duplicated genes formed by polyploidy during
@@ -70,6 +76,18 @@ Emms, D.~M. and Kelly, S. (2015).
   dramatically improves orthogroup inference accuracy.
 \newblock {\em Genome biology}, 16(1):157.
 
+\bibitem[Falquet et~al., 2002]{falquet2002prosite}
+Falquet, L., Pagni, M., Bucher, P., Hulo, N., Sigrist, C.~J., Hofmann, K., and
+  Bairoch, A. (2002).
+\newblock The prosite database, its status in 2002.
+\newblock {\em Nucleic acids research}, 30(1):235--238.
+
+\bibitem[Finn et~al., 2007]{finn2007pfam}
+Finn, R.~D., Tate, J., Mistry, J., Coggill, P.~C., Sammut, S.~J., Hotz, H.-R.,
+  Ceric, G., Forslund, K., Eddy, S.~R., Sonnhammer, E.~L., et~al. (2007).
+\newblock The pfam protein families database.
+\newblock {\em Nucleic acids research}, 36(suppl\_1):D281--D288.
+
 \bibitem[Fitch, 1970]{fitch1970distinguishing}
 Fitch, W.~M. (1970).
 \newblock Distinguishing homologous from analogous proteins.
@@ -97,6 +115,11 @@ Gardner, M.~J., Hall, N., Fung, E., White, O., Berriman, M., Hyman, R.~W.,
 \newblock Genome sequence of the human malaria parasite plasmodium falciparum.
 \newblock {\em Nature}, 419(6906):498.
 
+\bibitem[Grant et~al., 2009]{grant2009soybase}
+Grant, D., Nelson, R.~T., Cannon, S.~B., and Shoemaker, R.~C. (2009).
+\newblock Soybase, the usda-ars soybean genetics and genomics database.
+\newblock {\em Nucleic acids research}, 38(suppl\_1):D843--D846.
+
 \bibitem[Hubbard et~al., 2006]{hubbard2006ensembl}
 Hubbard, T.~J., Aken, B.~L., Beal, K., Ballester, B., C{\'a}ccamo, M., Chen,
   Y., Clarke, L., Coates, G., Cunningham, F., Cutts, T., et~al. (2006).
@@ -109,6 +132,17 @@ Kissinger, J.~C., Brunk, B.~P., Crabtree, J., Fraunholz, M.~J., Gajria, B.,
   (2002).
 \newblock The plasmodium genome database.
 \newblock {\em Nature}, 419(6906):490.
+
+\bibitem[Kroc et~al., 2014]{Kroc2014}
+Kroc, M., Koczyk, G., {\'S}wiecicki, W., Kilian, A., and Nelson, M.~N. (2014).
+\newblock New evidence of ancestral polyploidy in the genistoid legume lupinus
+  angustifolius l. (narrow-leafed lupin).
+\newblock {\em Theoretical and Applied Genetics}, 127(5):1237--1249.
+
+\bibitem[Letunic et~al., 2011]{letunic2011smart}
+Letunic, I., Doerks, T., and Bork, P. (2011).
+\newblock Smart 7: recent updates to the protein domain annotation resource.
+\newblock {\em Nucleic acids research}, 40(D1):D302--D305.
 
 \bibitem[Lewis, 2005]{lewis2005legumes}
 Lewis, G.~P. (2005).
@@ -126,6 +160,19 @@ Li, H., Coghlan, A., Ruan, J., Coin, L.~J., Heriche, J.-K., Osmotherly, L., Li,
 Li, L., Stoeckert, C.~J., and Roos, D.~S. (2003).
 \newblock Orthomcl: identification of ortholog groups for eukaryotic genomes.
 \newblock {\em Genome research}, 13(9):2178--2189.
+
+\bibitem[Marchler-Bauer et~al., 2010]{marchler2010cdd}
+Marchler-Bauer, A., Lu, S., Anderson, J.~B., Chitsaz, F., Derbyshire, M.~K.,
+  DeWeese-Scott, C., Fong, J.~H., Geer, L.~Y., Geer, R.~C., Gonzales, N.~R.,
+  et~al. (2010).
+\newblock Cdd: a conserved domain database for the functional annotation of
+  proteins.
+\newblock {\em Nucleic acids research}, 39(suppl\_1):D225--D229.
+
+\bibitem[Mistry et~al., 2007]{mistry2007predicting}
+Mistry, J., Bateman, A., and Finn, R.~D. (2007).
+\newblock Predicting active site residue annotations in the pfam database.
+\newblock {\em BMC bioinformatics}, 8(1):298.
 
 \bibitem[Natale et~al., 2000a]{natale2000using}
 Natale, D., Galperin, M., Tatusov, R., and Koonin, E. (2000a).
@@ -163,6 +210,12 @@ Schlueter, J.~A., Dixon, P., Granger, C., Grant, D., Clark, L., Doyle, J.~J.,
 \newblock Mining est databases to resolve evolutionary events in major crop
   species.
 \newblock {\em Genome}, 47(5):868--876.
+
+\bibitem[Song et~al., 2007]{song2007domain}
+Song, N., Sedgewick, R.~D., and Durand, D. (2007).
+\newblock Domain architecture comparison for multidomain homology
+  identification.
+\newblock {\em Journal of Computational Biology}, 14(4):496--516.
 
 \bibitem[Sonnhammer and Koonin, 2002]{sonnhammer2002orthology}
 Sonnhammer, E.~L. and Koonin, E.~V. (2002).

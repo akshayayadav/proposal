@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.22)  11 JUL 2018 18:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.22)  12 JUL 2018 12:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -557,13 +557,13 @@ Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
  [28]) [29] (./methods-gene-families.aux) ) 
 Here is how much of TeX's memory you used:
- 2606 strings out of 493029
- 41348 string characters out of 6136234
- 107909 words of memory out of 5000000
- 6104 multiletter control sequences out of 15000+600000
+ 2634 strings out of 493029
+ 41977 string characters out of 6136234
+ 108217 words of memory out of 5000000
+ 6132 multiletter control sequences out of 15000+600000
  8848 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,9n,32p,1558b,253s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,9n,32p,1558b,251s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
@@ -576,7 +576,7 @@ sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on methods-gene-families.pdf (29 pages, 1111633 bytes).
+Output written on methods-gene-families.pdf (29 pages, 1113284 bytes).
 PDF statistics:
  179 PDF objects out of 1000 (max. 8388607)
  101 compressed objects within 2 object streams

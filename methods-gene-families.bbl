@@ -211,6 +211,11 @@ Schlueter, J.~A., Dixon, P., Granger, C., Grant, D., Clark, L., Doyle, J.~J.,
   species.
 \newblock {\em Genome}, 47(5):868--876.
 
+\bibitem[S{\"o}ding, 2004]{soding2004protein}
+S{\"o}ding, J. (2004).
+\newblock Protein homology detection by hmm--hmm comparison.
+\newblock {\em Bioinformatics}, 21(7):951--960.
+
 \bibitem[Song et~al., 2007]{song2007domain}
 Song, N., Sedgewick, R.~D., and Durand, D. (2007).
 \newblock Domain architecture comparison for multidomain homology

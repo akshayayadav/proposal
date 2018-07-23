@@ -139,7 +139,9 @@
 			This scoring method will be used to inspect and merge small legume families into larger families. There are 2042 legume families that could be possibly under-clustered ($\leq$10 family size). This will help in reducing the number of under-clustered families and generating a set of high-quality legume families.
 			
 			\subsubsection{Solving scalability issues}
-			Currently, the pair classification based method is not fast enough to be efficiently applied on all legume the families. To solve these scalability issues, multi-threading can be implemented to execute the test-train split iterations parallelly. 
+			The pair classification based method is not fast enough to be efficiently applied on all legume the families. There are mainly two steps in the workflow that can be optimized to speed-up the method viz. the initial phmmer based database search and selecting the closest non-family sequences for forming negative pairs. Currently, every given family is searched against the entire set of all proteomes under study. The search space can be reduced by only searching within the neighborhood sequences/families.Tools like HHsearch \citep{soding2004protein} can be used to detect neighborhood families and limit the search space for every family. 
+			
+			Similarly, when selecting the closest non-family sequences, only those non-family sequences that are detected by more than one family sequences (or some proportion of family sequences) can be selected. Currently, a union of non-family sequences detected by every family sequence are selected for forming negative pairs.
 			
 			\pagebreak
 	

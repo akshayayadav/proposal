@@ -204,7 +204,7 @@
 		
 		The merged families obtained using the pair classification based method will also be analyzed using the tree based scoring to resolve any over-clustered families produced due to merging.
 		
-		An R-package will be developed where users can analyze and score family trees with respect to a given set of outgroups. The R-package will also be able to directly extract ingroup clades from over-clustered families.
+		An R/PYTHON tool can be developed where users can analyze and score family trees with respect to a given set of outgroups. The tool will also be able to directly extract ingroup clades from over-clustered families.
 		\pagebreak
 		
 	\subsection{Domain composition based family scoring}
@@ -274,7 +274,36 @@
 	
 	It will also be interesting to study biological characteristics of families with high tree-based precision scores and low domain composition scores as these are the rapidly evolving families that have gained or lost protein domains within short evolutionary periods.
 	
+	
+	\subsection{Species composition based family scoring}
+	Species composition of a gene family can be defined as the number of sequences represented by per species in the family. Consistent/good families can be expected to have fairly even species compositions with most of the species represented in the family. Also, for well-behaved families the observed sequence counts, per species should be close to expected sequence counts per species. The expected sequence counts for each species per family is largely dependent on occurrences of large-scale duplications and deletions such as WGDs during species evolution.
+		
+		\subsubsection{Methods}
+		For a given set of families, built from a specified set of species, a vector of expected species counts per family is obtained using expert opinion. This expected species count vector is compared to the observed species count vector from every family, using cosine similarity function, to assign species composition based scores to corresponding family. Unusually small or large families with highly uneven species compositions are expected to have lower scores than families where most of the species are represented evenly.
+		
+		\subsubsection{Preliminary results}
+		The species composition based scoring  was applied to Ks-based legume families built from 14 ingroup legume species and 4 outgroup species. The expected count vector corresponding to the 14 legume species was inferred using the histories of the WGD detected in the evolution of the legume species. A WGD has occurred the common ancestor the legume species about 55 Mya (PGWD). Also, lineage specific  WGD and WGT have occurred in soybean and lupin, respectively. Moreover, the tetraploid peanut, \textit{Arachis hypogea} is an allopolyploid evolved for the two diploid Arachis species. Therefore, 4 soybean genes, 6 Lupin genes, 4 Arachis hypogea and 2 genes from rest of the 11 species can be expected to be present in families, assuming no gene loss during family evolution.
+		
+		The expected count vector was calculated as number of expected number of genes per species (Table). All the legume families were scored by comparing the expected counts vector to the observed species counts through cosine similarity function. The plot (Figure ~\ref{fig:scatter_famsize_vs_species_comp_cosine_score}) of species composition based family scores versus the ingroup sequence counts was obtained to study the relationship between family size that the scores. The plot shows that small families with highly uneven species composition have lower scores and the scores increase linearly as the ingroup sequence count increases.
+		
+		The legume families fall into at least 2 distinct size classes viz., families which seem to have lost the duplicate gene resulting from the Papilionoid WGD and those which seem to have retained the duplicate gene from the WGD. Families with ingroup sequence counts between 15-45 have highest composition scores with two distinct peaks between 15-30 and  30-45. These peaks correspond to the two types of legume families that have either lost or retained the PWGD duplicate.
+		
+		Minority of the largest families have high cosine scores.  These families have species counts that are far greater than expected, however, the composition is even across all the species. These families are likely result of gene-specific duplications that have occured in the common ancestor. This scoring method rightly assigns higher scores to these families.
+		
+		\begin{figure}[h!]
+			\fbox{\includegraphics[width=\linewidth]{figures/scatter_famsize_vs_species_comp_cosine_score.png}}
+			\caption{Plot of species composition based family scores versus the ingroup sequence counts of Ks-based legume families}
+			\label{fig:scatter_famsize_vs_species_comp_cosine_score}
+		\end{figure}
+		
+		\subsubsection{Significance}
+		The species composition based family scoring assumes that evolutionarily well-behaved families are expected to have sequence counts per species closer the expected sequence counts. The results on the legume families show that the scoring method assigns higher scores to legume families with sizes between 15-45 confirming the hypothesis that families between the range have even species compositions.
+	
+		\subsubsection{Future work}
+		This scoring method can be used in conjunction with pair classification based, domain based and tree based scoring methods for correcting under-clustered and over-clustered legume families.Specifically, small/moderate families with low species composition score can be selected as under-clustered families for further processing through the pair classification approach. 
 	\pagebreak
+	
+	
 	\section{Objective 3: Developing workflow for building consensus families from multiple family sets}
 	Family consistency can be assessed by comparing families generated by different family construction methods. This workflow involves comparing the 2 sets of families, obtained from 2 different family building approaches, to establish family correspondences between the 2 sets; which family from one set best corresponds to which family from the second set. Degrees of overlaps between corresponding families, between the two sets, can be used as measure of family consistency.
 	

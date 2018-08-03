@@ -3,6 +3,9 @@
 \usepackage{array}
 \usepackage{natbib}
 \usepackage[margin=1in]{geometry}
+%\usepackage{titlesec}
+%\titleclass{\section}{top}
+%\newcommand\sectionbreak{\clearpage}
 \date{}
 \makeatletter
 \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
@@ -164,7 +167,7 @@
 		
 		\begin{figure}[h!]
 			\fbox{\includegraphics[width=\linewidth]{figures/hist_tree_precision_scores_lgf5.png}}
-			\caption{Distribution of tree based precision scores of Ks-based families}
+			\caption{Distribution of tree based precision scores for Ks-based families}
 			\label{fig:hist_tree_precision_scores_lgf5}
 		\end{figure}
 		
@@ -284,7 +287,47 @@
 		\subsubsection{Preliminary results}
 		The species composition based scoring  was applied to Ks-based legume families built from 14 ingroup legume species and 4 outgroup species. The expected count vector corresponding to the 14 legume species was inferred using the histories of the WGD detected in the evolution of the legume species. A WGD has occurred the common ancestor the legume species about 55 Mya (PGWD). Also, lineage specific  WGD and WGT have occurred in soybean and lupin, respectively. Moreover, the tetraploid peanut, \textit{Arachis hypogea} is an allopolyploid evolved for the two diploid Arachis species. Therefore, 4 soybean genes, 6 Lupin genes, 4 Arachis hypogea and 2 genes from rest of the 11 species can be expected to be present in families, assuming no gene loss during family evolution.
 		
-		The expected count vector was calculated as number of expected number of genes per species (Table). All the legume families were scored by comparing the expected counts vector to the observed species counts through cosine similarity function. The plot (Figure ~\ref{fig:scatter_famsize_vs_species_comp_cosine_score}) of species composition based family scores versus the ingroup sequence counts was obtained to study the relationship between family size that the scores. The plot shows that small families with highly uneven species composition have lower scores and the scores increase linearly as the ingroup sequence count increases.
+		The expected count vector was obtained as number of expected number of genes per species (Table  ~\ref{tab:exp_gene_count_table}). All the legume families were scored by comparing the expected counts vector to the observed species counts using cosine similarity function. The plot (Figure ~\ref{fig:scatter_famsize_vs_species_comp_cosine_score}) of species composition based family scores versus the ingroup sequence counts was obtained to study the relationship between family size that the scores. The plot shows that small families with highly uneven species composition have lower scores and the scores increase as the ingroup sequence count increases.
+		
+		\begin{table}[h!]
+			\centering
+			\begin{tabular}{|c |c |} 
+				\hline
+				Species ID & expected gene counts \\
+				\hline\hline
+				glyma & 4 \\ 
+				\hline
+				phavu & 2 \\
+				\hline
+				vigan & 2 \\
+				\hline
+				vigra & 2 \\
+				\hline
+				vigun & 2 \\ 
+				\hline
+				cajca & 2 \\
+				\hline
+				medtr & 2 \\
+				\hline
+				cicar & 2 \\
+				\hline
+				tripr & 2 \\
+				\hline
+				lotja & 2 \\
+				\hline
+				lupan & 6 \\
+				\hline
+				aradu & 2 \\
+				\hline
+				araip & 2 \\
+				\hline
+				arahy & 4 \\
+				\hline
+			\end{tabular}
+			\caption{Expected gene counts per species per family assuming no gene loss following genome multiplication}
+			\label{tab:exp_gene_count_table}
+		\end{table}
+		
 		
 		The legume families fall into at least 2 distinct size classes viz., families which seem to have lost the duplicate gene resulting from the Papilionoid WGD and those which seem to have retained the duplicate gene from the WGD. Families with ingroup sequence counts between 15-45 have highest composition scores with two distinct peaks between 15-30 and  30-45. These peaks correspond to the two types of legume families that have either lost or retained the PWGD duplicate.
 		
@@ -300,9 +343,12 @@
 		The species composition based family scoring assumes that evolutionarily well-behaved families are expected to have sequence counts per species closer the expected sequence counts. The results on the legume families show that the scoring method assigns higher scores to legume families with sizes between 15-45 confirming the hypothesis that families between the range have even species compositions.
 	
 		\subsubsection{Future work}
-		This scoring method can be used in conjunction with pair classification based, domain based and tree based scoring methods for correcting under-clustered and over-clustered legume families.Specifically, small/moderate families with low species composition score can be selected as under-clustered families for further processing through the pair classification approach. 
+		This scoring method can be used in conjunction with pair classification based, domain based and tree based scoring methods for correcting under-clustered and over-clustered legume families.Specifically, small/moderate families with low species composition score can be selected as under-clustered families for further processing through the pair classification approach.
+		
+		This scoring method can also be used for selecting legtimate ingroup clades while separating/cutting out family clades from over-clustered families detected using the tree based scoring method.
+		
+		
 	\pagebreak
-	
 	
 	\section{Objective 3: Developing workflow for building consensus families from multiple family sets}
 	Family consistency can be assessed by comparing families generated by different family construction methods. This workflow involves comparing the 2 sets of families, obtained from 2 different family building approaches, to establish family correspondences between the 2 sets; which family from one set best corresponds to which family from the second set. Degrees of overlaps between corresponding families, between the two sets, can be used as measure of family consistency.
@@ -332,20 +378,20 @@
 			\label{fig:scatter_lgf5_vs_orthofinder_overlap_lgf5}
 		\end{figure}
 		
-		The distribution of ingroup sequence counts (Figure ~\ref{fig:hist_seq_ct_lgf5_vs_orthofinder_90percent_overlap}) was also obtained from the families where both the overlap scores were $\geq$ 0.9, to study the family size distribution of families that are consistently detected by both family building algorithms. The distribution shows that consist families are selected from all types of family sizes and not any particular family size.
-		
 		\begin{figure}[h!]
 			\fbox{\includegraphics[width=\linewidth]{figures/hist_seq_ct_lgf5_vs_orthofinder_90percent_overlap.png}}
 			\caption{Distribution of ingroup sequence counts for Ks-based families with both overlaps scores $\geq$ 0.9 }
 			\label{fig:hist_seq_ct_lgf5_vs_orthofinder_90percent_overlap}
 		\end{figure}
 		
+		The distribution of ingroup sequence counts (Figure ~\ref{fig:hist_seq_ct_lgf5_vs_orthofinder_90percent_overlap}) was also obtained from the families where both the overlap scores were $\geq$ 0.9, to study the family size distribution of families that are consistently detected by both family building algorithms. The distribution shows that consist families are selected from all types of family sizes and not any particular family size.
+				
 		This workflow has been developed into a PYTHON tool which accepts 2 sets of HMMs corresponding to the 2 family sets and a single set of sequences to be classified into the two family sets.
 		
 		\subsection{Future work}
 		The legume families that are found to overlap between the two sets can be released as high-quality set of families. Different sets can be assigned different confidence levels according to the overlaps found between the two sets.
 	
-	\pagebreak
+	\clearpage
 	\section{Objective 4: Biological characterization of the legume families}
 	This section involves exploring biological characteristics of different types of legume families. The legume ancestor is known to have undergone a WGD before divergence \citep{cannon2014multiple}.  However, some families seem to retain the duplicated gene and some families have lost the duplicate gene resulting from the WGD. As a result, legume families can be divided into distinct size classes - families with sizes between 10-30 and families between sizes 30-43. The former class of families are those that seem to have lost the duplicate gene and latter class have retained the duplicate gene. This work investigates if there is any biological basis to this phenomenon, using Gene Ontology (GO) enrichment analysis. 
 	
@@ -362,11 +408,6 @@
 		
 		\subsection{Preliminary results}
 		Distinct GO terms were found to be significantly enriched for all 4 groups of families. The enrichment for group 1 was less significant. This may be because group 1 may contain fragmented under-clustered families that could be merged into families from other 3 groups. Tables ~\ref{tab:gotable_group1}, ~\ref{tab:gotable_group2_subset}, ~\ref{tab:gotable_group3}, ~\ref{tab:gotable_group4} show the top 5 enriched GO terms for each of the size groups.
-		
-		\subsection{Future work}
-		This analysis can be repeated on the high-confidence legume families obtained from the pair classification based family scoring workflow (merging under-clustered families), tree-based and domain-based scoring workflows (splitting over-clustered families) and the family sets comparison workflow (obtaining highly consistent families). 
-		
-		Applying domain based scoring on the high-confidence families can help in identifying slow-evolving/recent families (high Jaccard and cosine domain composition scores) and fast-evolving/ancient families (low jaccard and cosine domain composition scores). GO enrichment analysis of these families can help in understanding the evolutionary pressures experienced by legume species during evolution.
 		
 		\begin{table}[h!]
 			\centering
@@ -451,8 +492,15 @@
 			\caption{GO enrichment for Group 4 soybean genes}
 			\label{tab:gotable_group4}
 		\end{table}
-
-	\pagebreak
+		
+		
+		
+		\subsection{Future work}
+		This analysis can be repeated on the high-confidence legume families obtained from the pair classification based family scoring workflow (merging under-clustered families), tree-based and domain-based scoring workflows (splitting over-clustered families) and the family sets comparison workflow (obtaining highly consistent families). 
+		
+		Applying domain based scoring on the high-confidence families can help in identifying slow-evolving/recent families (high Jaccard and cosine domain composition scores) and fast-evolving/ancient families (low Jaccard and cosine domain composition scores). GO enrichment analysis of these families can help in understanding the evolutionary pressures experienced by legume species during evolution.
+		
+		
 	
 	\bibliography{references/ref.bib}
 	\bibliographystyle{apalike}

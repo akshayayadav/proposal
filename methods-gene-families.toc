@@ -30,7 +30,7 @@
 \contentsline {subsection}{\numberline {3.3}Species composition based family scoring}{23}
 \contentsline {subsubsection}{\numberline {3.3.1}Methods}{23}
 \contentsline {subsubsection}{\numberline {3.3.2}Preliminary results}{23}
-\contentsline {subsubsection}{\numberline {3.3.3}Significance}{23}
+\contentsline {subsubsection}{\numberline {3.3.3}Significance}{25}
 \contentsline {subsubsection}{\numberline {3.3.4}Future work}{25}
 \contentsline {section}{\numberline {4}Objective 3: Developing workflow for building consensus families from multiple family sets}{26}
 \contentsline {subsection}{\numberline {4.1}Methods}{26}

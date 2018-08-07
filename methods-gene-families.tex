@@ -3,6 +3,8 @@
 \usepackage{array}
 \usepackage{natbib}
 \usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 %\usepackage{titlesec}
 %\titleclass{\section}{top}
 %\newcommand\sectionbreak{\clearpage}
@@ -282,7 +284,13 @@
 	Species composition of a gene family can be defined as the number of sequences represented by per species in the family. Consistent/good families can be expected to have fairly even species compositions with most of the species represented in the family. Also, for well-behaved families the observed sequence counts, per species should be close to expected sequence counts per species. The expected sequence counts for each species per family is largely dependent on occurrences of large-scale duplications and deletions such as WGDs during species evolution.
 		
 		\subsubsection{Methods}
-		For a given set of families, built from a specified set of species, a vector of expected species counts per family is obtained using expert opinion. This expected species count vector is compared to the observed species count vector from every family, using cosine similarity function, to assign species composition based scores to corresponding family. Unusually small or large families with highly uneven species compositions are expected to have lower scores than families where most of the species are represented evenly.
+		For a given set of families, built from a specified set of species, a vector of expected species counts per family is obtained using expert opinion. This expected species count vector is compared to the observed species count vector from every family, using cosine similarity function (Equation ~\ref{cosine_sim_sp_comp}), to assign species composition based scores to corresponding family. Unusually small or large families with highly uneven species compositions are expected to have lower scores than families where most of the species are represented evenly.
+		
+		\begin{equation}
+		cosine\_similarity(O,E) = \frac{O \cdot E}{\norm O \norm E}
+		= \frac{\sum_{i=1}^{n} O_i E_i}{\sqrt{\sum_{i=1}^{n} O_i^2} \sqrt{\sum_{i=1}^{n} E_i^2}}
+		\label{cosine_sim_sp_comp}
+		\end{equation}
 		
 		\subsubsection{Preliminary results}
 		The species composition based scoring  was applied to Ks-based legume families built from 14 ingroup legume species and 4 outgroup species. The expected count vector corresponding to the 14 legume species was inferred using the histories of the WGD detected in the evolution of the legume species. A WGD has occurred the common ancestor the legume species about 55 Mya (PGWD). Also, lineage specific  WGD and WGT have occurred in soybean and lupin, respectively. Moreover, the tetraploid peanut, \textit{Arachis hypogea} is an allopolyploid evolved for the two diploid Arachis species. Therefore, 4 soybean genes, 6 Lupin genes, 4 Arachis hypogea and 2 genes from rest of the 11 species can be expected to be present in families, assuming no gene loss during family evolution.

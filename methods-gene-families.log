@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.6)  7 AUG 2018 12:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.7.29)  9 AUG 2018 23:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -536,8 +536,8 @@ ures/scatter_domain_cosine_vs_tree_precision_lgf5.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-<figures/scatter_famsize_vs_species_comp_cosine_score.png, id=111, 651.18282pt 
+[23]
+<figures/scatter_famsize_vs_species_comp_cosine_score.png, id=115, 651.18282pt 
 x 493.845pt>
 File: figures/scatter_famsize_vs_species_comp_cosine_score.png Graphic file (ty
 pe png)
@@ -553,27 +553,23 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 345--346
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[23]
 
-LaTeX Warning: Text page 24 contains only floats.
-
-[24 <./figures/scatter_famsize_vs_species_comp_cosine_score.png>]
 Overfull \hbox (3.2736pt too wide) in paragraph at lines 354--355
 \OT1/cmr/m/n/10 scor-ing meth-ods for cor-rect-ing under-clustered and over-clu
 stered legume fam-i-lies.Specifically, small/moderate
  []
 
-[25]
+[24] [25 <./figures/scatter_famsize_vs_species_comp_cosine_score.png>]
 <figures/scatter_lgf5_vs_orthofinder_overlap_lgf5.png, id=124, 651.18282pt x 49
 3.845pt>
 File: figures/scatter_lgf5_vs_orthofinder_overlap_lgf5.png Graphic file (type p
 ng)
  <use figures/scatter_lgf5_vs_orthofinder_overlap_lgf5.png>
 Package pdftex.def Info: figures/scatter_lgf5_vs_orthofinder_overlap_lgf5.png u
-sed on input line 384.
+sed on input line 383.
 (pdftex.def)             Requested size: 469.75502pt x 356.26138pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 384--385
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 383--384
 [][] 
  []
 
@@ -588,34 +584,36 @@ e (type png)
 
 <use figures/hist_seq_ct_lgf5_vs_orthofinder_90percent_overlap.png>
 Package pdftex.def Info: figures/hist_seq_ct_lgf5_vs_orthofinder_90percent_over
-lap.png used on input line 390.
+lap.png used on input line 389.
 (pdftex.def)             Requested size: 469.75502pt x 356.26138pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 390--391
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 389--390
 [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[26] [27 <./figures/scatter_lgf5_vs_orthofinder_overlap_lgf5.png>] [28 <./figur
-es/hist_seq_ct_lgf5_vs_orthofinder_90percent_overlap.png>]
+[26
+
+] [27 <./figures/scatter_lgf5_vs_orthofinder_overlap_lgf5.png>] [28 <./figures/
+hist_seq_ct_lgf5_vs_orthofinder_90percent_overlap.png>]
 <figures/hist_lgf5_family_size_groups.png, id=137, 651.18282pt x 493.845pt>
 File: figures/hist_lgf5_family_size_groups.png Graphic file (type png)
 
 <use figures/hist_lgf5_family_size_groups.png>
 Package pdftex.def Info: figures/hist_lgf5_family_size_groups.png used on input
- line 410.
+ line 409.
 (pdftex.def)             Requested size: 469.75502pt x 356.26138pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 410--411
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 409--410
 [][] 
  []
 
 [29
 
  <./figures/hist_lgf5_family_size_groups.png (PNG copy)>]
-Overfull \hbox (1.35696pt too wide) in paragraph at lines 509--510
+Overfull \hbox (1.35696pt too wide) in paragraph at lines 508--509
 []\OT1/cmr/m/n/10 Applying do-main based scor-ing on the high-confidence fam-i-
 lies can help in iden-ti-fy-ing slow-evolving/recent
  []
@@ -627,12 +625,12 @@ Missing character: There is no ™ in font cmr10!
  [31] [32]) [33] (./methods-gene-families.aux) ) 
 Here is how much of TeX's memory you used:
  3256 strings out of 493029
- 49347 string characters out of 6136235
- 119705 words of memory out of 5000000
+ 49347 string characters out of 6136234
+ 118704 words of memory out of 5000000
  6732 multiletter control sequences out of 15000+600000
  9976 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,9n,32p,1558b,278s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,9n,32p,1563b,278s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
@@ -646,7 +644,7 @@ texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on methods-gene-families.pdf (33 pages, 1255162 bytes).
+Output written on methods-gene-families.pdf (33 pages, 1255117 bytes).
 PDF statistics:
  198 PDF objects out of 1000 (max. 8388607)
  113 compressed objects within 2 object streams

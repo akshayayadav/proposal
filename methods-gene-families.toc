@@ -3,7 +3,7 @@
 \contentsline {subsection}{\numberline {1.2}Improving and characterizing gene families}{2}
 \contentsline {subsection}{\numberline {1.3}Gene families in legumes}{3}
 \contentsline {subsection}{\numberline {1.4}Specific objectives}{3}
-\contentsline {section}{\numberline {2}Objective 1: Developing pair classification based method for detecting under-clustered gene families}{4}
+\contentsline {section}{\numberline {2}Objective 1: Develop pair classification based methods for detecting under-clustered gene families}{4}
 \contentsline {subsection}{\numberline {2.1}Methods}{4}
 \contentsline {subsubsection}{\numberline {2.1.1}Family searching and collecting closest non-family sequences}{4}
 \contentsline {subsubsection}{\numberline {2.1.2}Forming family and non-family pairs}{4}
@@ -14,7 +14,7 @@
 \contentsline {subsection}{\numberline {2.4}Future work}{12}
 \contentsline {subsubsection}{\numberline {2.4.1}Merging small legume families}{12}
 \contentsline {subsubsection}{\numberline {2.4.2}Solving scalability issues}{12}
-\contentsline {section}{\numberline {3}Objective 2: Developing tree based and domain composition based methods for detecting over-clustered families}{13}
+\contentsline {section}{\numberline {3}Objective 2: Develop tree based and domain composition based methods for detecting over-clustered families}{13}
 \contentsline {subsection}{\numberline {3.1}Tree based family scoring}{13}
 \contentsline {subsubsection}{\numberline {3.1.1}Methods}{13}
 \contentsline {subsubsection}{\numberline {3.1.2}Preliminary results}{13}
@@ -26,13 +26,13 @@
 \contentsline {paragraph}{\numberline {3.2.1.2}Domain feature vector based cosine score}{17}
 \contentsline {subsubsection}{\numberline {3.2.2}Preliminary results}{17}
 \contentsline {subsubsection}{\numberline {3.2.3}Significance}{17}
-\contentsline {subsubsection}{\numberline {3.2.4}Future work}{17}
+\contentsline {subsubsection}{\numberline {3.2.4}Future work}{23}
 \contentsline {subsection}{\numberline {3.3}Species composition based family scoring}{23}
 \contentsline {subsubsection}{\numberline {3.3.1}Methods}{23}
 \contentsline {subsubsection}{\numberline {3.3.2}Preliminary results}{23}
-\contentsline {subsubsection}{\numberline {3.3.3}Significance}{25}
-\contentsline {subsubsection}{\numberline {3.3.4}Future work}{25}
-\contentsline {section}{\numberline {4}Objective 3: Developing workflow for building consensus families from multiple family sets}{26}
+\contentsline {subsubsection}{\numberline {3.3.3}Significance}{24}
+\contentsline {subsubsection}{\numberline {3.3.4}Future work}{24}
+\contentsline {section}{\numberline {4}Objective 3: Develop a workflow for building consensus families from multiple family sets}{26}
 \contentsline {subsection}{\numberline {4.1}Methods}{26}
 \contentsline {subsubsection}{\numberline {4.1.1}Building HMM sets for families}{26}
 \contentsline {subsubsection}{\numberline {4.1.2}Classifying common set of proteomes into families using HMM sets}{26}

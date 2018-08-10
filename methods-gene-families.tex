@@ -23,7 +23,7 @@
 	\maketitle
 	\tableofcontents
 	\begin{abstract}
-	Gene families are groups of genes that have evolved from single common ancestral gene present the common ancestor of given set of species. Studying evolution of genes in the families helps in inferring evolution of species and in detecting evolutionarily/funtionally equivalent regions between multiple different genomes. Current gene family clustering methods can produce non-optimal families that could be under-clustered (missing sequences) or over-clustered (containing sequences from more than one family). This project presents methods for analyzing gene families - for over- and under-clustering and by other characteristics, after they have been built using existing family building methods. The proposed methods include (1) a pair classification based approach for detecting and correcting under-clustered families; (2) tree-based methods that assess families based on expected phylogenetic toplogy; (3) domain composition methods that assess families based on domains detected in the sequences in a family; (4) species composition methods that assess families based on expected species in a family, relative to a model of gene duplications and speciations and (5) family sets comparison workflow for obtaining consensus families from multiple family sets built using different methods. Finally, the high-quality gene families from legume species, obtained using the proposed methods, are first divided into different groups based on their sizes and each group is characterized using Gene Ontology enrichment analysis.  
+	Gene families are groups of genes that have evolved from single common ancestral gene present in the common ancestor of a given set of species. Studying evolution of genes in the families helps in inferring evolution of species and in detecting evolutionarily/funtionally equivalent regions between multiple different genomes. Current gene family clustering methods can produce non-optimal families that could be under-clustered (missing sequences) or over-clustered (containing sequences from more than one family). This project presents methods for analyzing gene families - for over- and under-clustering and by other characteristics, after they have been built using existing family building methods. The proposed methods include (1) a pair classification based approach for detecting and correcting under-clustered families; (2) tree-based methods that assess families based on expected phylogenetic toplogy; (3) domain composition methods that assess families based on domains detected in the sequences in a family; (4) species composition methods that assess families based on expected species in a family, relative to a model of gene duplications and speciations and (5) family sets comparison workflow for obtaining consensus families from multiple family sets built using different methods. Finally, the high-quality gene families from legume species, obtained using the proposed methods, are first divided into different groups based on their sizes and each group is characterized using Gene Ontology enrichment analysis.  
 	\end{abstract}
 	
 	\section{Introduction}
@@ -33,33 +33,33 @@
 		Clustering genes into families helps in capturing evolutionary information from multiple species for studying the divergence or conservation of particular biological functions, with respect to given set of species. Gene families can also be used for identification of candidates drug/vaccine development in case of parasites like \textit{Plasmodium falciparum} which causes malaria in humans \citep{gardner2002genome,kissinger2002plasmodium,whetzel2005plasmodb}. Gene families have also been used for annotation of newly sequenced genomes and for anti-bacterial drug development by cross-referencing functional information from multiple species \citep{tatusov1997genomic,galperin1999searching,natale2000towards,natale2000using,forterre2002hot}
 		
 		\subsection{Improving and characterizing gene families}
-		Clusters of Orthologous Groups (COG) database is one of the earliest widely-used collection of gene families \citep{tatusov2000cog,tatusov2001cog}. The orthologous groups in the COG database were identified based on reciprocal best hits from all-against-all BLAST searches using complete proteomes from five major lineages - Gram-negative bacteria, Gram-positive bacteria, Cyanbacteria, Archea, and Eukarya. Existing family building algorithms can be divided into 2 main categories viz: BLAST/alignment statistics based clustering approaches and tree based approaches. The BLAST based clustering approaches either operate on individual pairs of species and then expand to multiple species - for example MultiParanoid (Inparanoid), OMA \citep{alexeyenko2006automatic,remm2001automatic,roth2008algorithm,altenhoff2010oma} - or attempt to infer families directly from multiple species with the common ancestor of given set of species as a reference;  OrthoMCL, OrthoFinder \citep{li2003orthomcl,emms2015orthofinder}. Tree-based methods compare the gene trees with the species trees using tree reconciliation methods for building gene families \citep{li2006treefam,van2007orthology,wapinski2007automatic,hubbard2006ensembl,dehal2006phylogenomic}.
+		The clusters of Orthologous Groups (COG) database is one of the earliest widely-used collections of gene families \citep{tatusov2000cog,tatusov2001cog}. The orthologous groups in the COG database were identified based on reciprocal best hits from all-against-all BLAST searches using complete proteomes from five major lineages - Gram-negative bacteria, Gram-positive bacteria, Cyanbacteria, Archea, and Eukarya. Existing family building algorithms can be divided into 2 main categories, viz: alignment-based clustering approaches and tree based approaches. The alignment-based clustering approaches either operate on individual pairs of species and then expand to multiple species - for example MultiParanoid (Inparanoid), OMA \citep{alexeyenko2006automatic,remm2001automatic,roth2008algorithm,altenhoff2010oma} - or attempt to infer families directly from multiple species with the common ancestor of given set of species as a reference;  OrthoMCL, OrthoFinder \citep{li2003orthomcl,emms2015orthofinder}. Tree-based methods compare the gene trees with the species trees using tree reconciliation methods for building gene families \citep{li2006treefam,van2007orthology,wapinski2007automatic,hubbard2006ensembl,dehal2006phylogenomic}.
 		  
 		 While many of the families produced by existing methods may be "correct", many non-optimal families could be produced due to under-clustering or over-clustering. Under-clustered families are those families that may have been fragmented by the clustering method (missing sequences). Over-clustered families are those families that may been produced due to merging of two or more closely related families. Also, a significant number of sequences can remain un-clustered and could be wrongly considered as singletons or orphan genes. 
 		
 		Therefore, it is important to analyze and assess the accuracy of families constructed using any method. Here, I propose a suite of methods and tools for improving under-clustered/over-clustered gene families, and for characterizing true and consistent families.
 		
 		\subsection{Gene families in legumes}
-		The legume family (Fabaceae) consists of 750 genera and 19,500 species of flowering plants making the family the third largest family of flowering plants \citep{lewis2005legumes}. The family is broadly divided into four major lineages viz. Papilionoideae, Mimosoideae-Cassiinae-Caesalpinieae (MCC), Detarieae and Cercideae, out of which the Papilionoideae is the largest. The Papilionoid sub-family includes species like \textit{Arachis hypogaea} (cultivated peanut), \textit{Cajanus cajan} (pigeonpea), \textit{Cicer arietinum} (chickpea), \textit{Glycine max} (soybean), \textit{Lotus japonicus} (Lotus), \textit{Lupinus angustifolius} (narrow-leafed lupin), \textit{Medicago truncatula} (barrel medic), \textit{Phaseolus vulgaris} (common bean), \textit{Trifolium pratense} (red clover), \textit{Vigna angularis} (adzuki bean), \textit{Vigna radiata} (mungbean) and \textit{Vigna unguiculata} (Cowpea).
+		The legume family (Fabaceae) consists of 750 genera and 19,500 species of flowering plants, making the third largest family of flowering plants \citep{lewis2005legumes}. The family is broadly divided into four major lineages viz. Papilionoideae, Mimosoideae-Cassiinae-Caesalpinieae (MCC), Detarieae and Cercideae, out of which the Papilionoideae is the largest. The Papilionoid sub-family includes species like \textit{Arachis hypogaea} (cultivated peanut), \textit{Cajanus cajan} (pigeonpea), \textit{Cicer arietinum} (chickpea), \textit{Glycine max} (soybean), \textit{Lotus japonicus} (Lotus), \textit{Lupinus angustifolius} (narrow-leafed lupin), \textit{Medicago truncatula} (barrel medic), \textit{Phaseolus vulgaris} (common bean), \textit{Trifolium pratense} (red clover), \textit{Vigna angularis} (adzuki bean), \textit{Vigna radiata} (mungbean) and \textit{Vigna unguiculata} (Cowpea).
 		
-		An ancient Whole Genome Duplication (WGD) occurred in common ancestor of the Papilionoid sub-family around 55 Ma. \citep{blanc2004functional,schlueter2004mining,pfeil2005placing,cannon2006legume,bertioli2009analysis,cannon2014multiple}. In addition, the Glycine and Lupin lineages have also undergone independent lineage specific WGDs \citep{cannon2014multiple,Kroc2014} 
+		An ancient Whole Genome Duplication (WGD) has occurred in common ancestor of the Papilionoid sub-family around 55 Ma. \citep{blanc2004functional,schlueter2004mining,pfeil2005placing,cannon2006legume,bertioli2009analysis,cannon2014multiple}. In addition, the  lineages such as \textit{Glycine} and \textit{Lupin} have also undergone independent lineage specific WGDs \citep{cannon2014multiple,Kroc2014} 
 		
 		Approximately 17k-18k gene families were obtained using a Ks-based (synonymous substitutions per site) family building procedure from the Papilionoid species proteomes. Additionally, for comparison, a different set of 20k families was also obtained from Papilionoid species using the OthroFinder method \citep{emms2015orthofinder}.
 		
 		\subsection{Specific objectives}
 			\begin{enumerate}
-				\item Developing pair classification based method for detecting and improving under-clustered gene families.
+				\item Develop pair classification based methods for detecting and improving under-clustered gene families.
 				
-				\item Developing tree based, domain composition and species composition based methods for detecting  and improving over-clustered gene families.
+				\item Develop tree based, domain composition and species composition based methods for detecting  and improving over-clustered gene families.
 				
-				\item Developing workflow for building consensus families from multiple family sets.
+				\item Develop a workflow for building consensus families from multiple family sets.
 				
 				\item Biological characterization of gene families for a set of species in the legume plant family.
 			\end{enumerate}
 		
 		\pagebreak
 
-	\section{Objective 1: Developing pair classification based method for detecting under-clustered gene families} 
+	\section{Objective 1: Develop pair classification based methods for detecting under-clustered gene families} 
 	This scoring method leverages the basic evolutionary property of gene families - all the sequences in the family must have diverged at/after the separation of earliest diverging species and none of the sequences outside the family have diverged in the family. Accordingly, for a given family, this method attempts to separate pairs from the family, from pairs where one sequence is in the family and other is outside the family. The separation statistics tell how well a given family of sequences can be circumscribed from closest non-family sequences.This can provide an indication of family completeness.
 		\subsection{Methods}
 			\subsubsection{Family searching and collecting closest non-family sequences}
@@ -110,7 +110,7 @@
 			Candidate missing sequences for every family are predicted using the non-family pairs. All the non-family pairs where the scores for both the sequences of a pair are greater than the best/lowest score cutoff are re-classified as positive pairs. Unique sequences within these reclassified positive pairs are predicted and reported as candidate missing sequences for the family.
 			
 		\subsection{Preliminary results}
-		The pair classification based scoring was tested on 4796 yeast families from the Yeast Gene Order Browser (YGOB) database \citep{byrne2005yeast}. Since the YGOB families are built through manual curation using synteny based evidence, they were assumed to be true. To check if the quality assessment workflow is assigning high quality scores to all the true families, the distribution of the PR-AUCs for all the 4796 yeast families was obtained (Figure ~\ref{fig:hist_pr-auc_true_ygob}). As expected the distribution of PR-AUCs is highly skewed towards PR-AUC value = 1.0 with 92\% of family classifiers having values $\geq$ 0.75. This shows that the method correctly recognizes good quality families and assigns high quality scores to them.
+		The pair classification based scoring was tested on 4796 yeast families from the Yeast Gene Order Browser (YGOB) database \citep{byrne2005yeast}. Since the YGOB families are built through manual curation using synteny based evidence, they were assumed to be "true". To check if the quality assessment workflow is assigning high quality scores to all the true families, the distribution of the PR-AUCs for all the 4796 yeast families was obtained (Figure ~\ref{fig:hist_pr-auc_true_ygob}). As expected the distribution of PR-AUCs is highly skewed towards PR-AUC value = 1.0 with 92\% of family classifiers having values $\geq$ 0.75. This shows that the method correctly recognizes good quality families and assigns high quality scores to them.
 		
 		\begin{figure}
 			\fbox{\includegraphics[width=\linewidth]{figures/hist_pr-auc_true_ygob.png}}
@@ -142,7 +142,7 @@
 		
 		\subsection{Future work}
 			\subsubsection{Merging small legume families}
-			This scoring method will be used to inspect and merge small legume families into larger families. There are 2042 legume families that could be possibly under-clustered ($\leq$10 family size). This will help in reducing the number of under-clustered families and generating a set of high-quality legume families.
+			This scoring method will be used to inspect and merge small legume families into larger families. In the Ks-based legume families, there are approximately 2000 families that may be under-clustered ($\leq$10 family size). This will help in reducing the number of under-clustered families and generating a set of high-quality legume families.
 			
 			\subsubsection{Solving scalability issues}
 			The pair classification based method is not fast enough to be efficiently applied on all legume the families. There are mainly two steps in the workflow that can be optimized to speed-up the method viz. the initial phmmer based database search and selecting the closest non-family sequences for forming negative pairs. Currently, every given family is searched against the entire set of all proteomes under study. The search space can be reduced by only searching within the neighborhood sequences/families.Tools like HHsearch \citep{soding2004protein} can be used to detect neighborhood families and limit the search space for every family. 
@@ -151,9 +151,9 @@
 			
 			\pagebreak
 	
-	\section{Objective 2: Developing tree based and domain composition based methods for detecting over-clustered families}	
+	\section{Objective 2: Develop tree based and domain composition based methods for detecting over-clustered families}	
 	\subsection{Tree based family scoring}
-	Family trees are largely expected to follow the pattern of evolution from the species tree. This equivalence between gene trees and species trees has been used previously in multiple methods like TreeFam, LOFT, SYNERGY, ENSEMBLE 2007, PhIGs \citep{li2006treefam,van2007orthology,wapinski2007automatic,hubbard2006ensembl,dehal2006phylogenomic} for building gene families and detection of orthologs and paralogs from the family trees. Animal gene families in TreeFam are the group of genes evolved from a single gene in last common of all animals. Genes in one family are identified on the basis that they are phylogenetically separated by one or more genes from the outgroup species (S. cerevisiae, S pombe. or A. thaliana)
+	Family trees are largely expected to follow the pattern of evolution from the species tree. This correspondence between gene trees and species trees has been used previously in multiple methods like TreeFam, LOFT, SYNERGY, ENSEMBLE 2007, PhIGs \citep{li2006treefam,van2007orthology,wapinski2007automatic,hubbard2006ensembl,dehal2006phylogenomic} for building gene families and detection of orthologs and paralogs from the family trees. Animal gene families in TreeFam are the group of genes evolved from a single gene in last common of all animals. Genes in one family are identified on the basis that they are phylogenetically separated by one or more genes from the outgroup species (S. cerevisiae, S pombe. or A. thaliana)
 	
 	Since gene families contain sequences that have diverged at or after the divergence of the earliest diverging species under study, genes within families have also diverged after the divergence of outgroup species. This evolutionary property of gene families can be used to score family trees by calculating the proportion of ingroup sequence pairs that appear to have diverged after the divergence of outgroup sequences in the corresponding phylogenetic trees of the families.
 		\subsubsection{Methods}
@@ -175,11 +175,11 @@
 		
 		\begin{figure}[h!]
 			\fbox{\includegraphics[width=\linewidth]{figures/scatter_tree_precision_vs_seqct_lgf5.png}}
-			\caption{Plot of tree based pair precision scores versus ingroup sequence count for lgf5 families}
+			\caption{Plot of tree based pair precision scores versus ingroup sequence count for Ks-based families}
 			\label{fig:scatter_tree_precision_vs_seqct_lgf5}
 		\end{figure}
 		
-		Examples of family trees with typical values of tree based pair precision scores are shown below. The outgroup sequences in the trees are shown in grey. Figure \ref{fig:tree_based_quality_type1_L_J5W12Z} shows family tree with low pair precision score (0.095). For this family, majority of ingroup sequences do not form a monophyletic clade. Figure \ref{fig:tree_based_quality_type2_L_4L11VC} shows family tree with pair precision score = 0.507. This family has two monophyletic ingroup clades that could potentially be two ingroup families clustered together by the family building algorithm. This shows that the pair precision score can detect such over-clustered families. Finally, Figure  \ref{fig:tree_based_quality_type3_L_4VWLVV} shows family with high pair precision score (0.876). Majority of ingroup  sequences form a monophyletic clade with two sequences diverging outside the family.
+		Examples of family trees with typical values of tree based pair precision scores are shown below. The outgroup sequences in the trees are shown in grey. Figure \ref{fig:tree_based_quality_type1_L_J5W12Z} shows family tree with low pair precision score (0.095). For this family, the majority of ingroup sequences do not form a monophyletic clade. Figure \ref{fig:tree_based_quality_type2_L_4L11VC} shows family tree with pair precision score = 0.507. This family has two monophyletic ingroup clades that could potentially be two ingroup families clustered together by the family building algorithm. This shows that the pair precision score can detect such over-clustered families. Finally, Figure  \ref{fig:tree_based_quality_type3_L_4VWLVV} shows a family with high pair precision score (0.876). Majority of ingroup  sequences form a monophyletic clade with two sequences diverging outside the family.
 		
 			
 		\begin{figure}[h!]
@@ -209,7 +209,7 @@
 		
 		The merged families obtained using the pair classification based method will also be analyzed using the tree based scoring to resolve any over-clustered families produced due to merging.
 		
-		An R/PYTHON tool can be developed where users can analyze and score family trees with respect to a given set of outgroups. The tool will also be able to directly extract ingroup clades from over-clustered families.
+		An R/Python tool can be developed where users can analyze and score family trees with respect to a given set of outgroups. The tool will also be able to directly extract ingroup clades from over-clustered families.
 		\pagebreak
 		
 	\subsection{Domain composition based family scoring}
@@ -227,7 +227,7 @@
 		Pfam clusters closely related domains in Pfam-A into clans. For sequences within the same family, closely related domains could be  detected interchangeably, for same positions, in closely related family sequences. To avoid this, clan-ids of the domains are used instead of domain-ids for calculating the domain feature vector based cosine scores.
 		
 		\subsubsection{Preliminary results}
-		The domain composition based Jaccard and cosine scoring were applied on the existing legume families to study the relationships between different scores and the ingroup sequence count. The score distributions for domain-based Jaccard scores can be seen from Figure ~\ref{fig:hist_domain_jaccard_scores_lgf5}
+		The domain composition based Jaccard and cosine scoring were applied on the existing legume families to study the relationships between different scores and the ingroup sequence count. The score distributions for domain-based Jaccard scores can be seen from Figure ~\ref{fig:hist_domain_jaccard_scores_lgf5}.
 		
 		\begin{figure}
 			\fbox{\includegraphics[width=\linewidth]{figures/hist_domain_jaccard_scores_lgf5.png}}
@@ -235,7 +235,7 @@
 			\label{fig:hist_domain_jaccard_scores_lgf5}
 		\end{figure}
 		
-		To study the relationship between the domain Jaccard score and family size, plot of jaccard score versus number of ingroup sequences in the family was obtained (Figure ~\ref{fig:scatter_domain_jaccard_vs_seq_ct_lgf5}). The Jaccard scores are high for majority of families with number of ingroup sequences between 15-45.
+		To study the relationship between the domain Jaccard score and family size, the plot of jaccard score versus number of ingroup sequences in the family was obtained (Figure ~\ref{fig:scatter_domain_jaccard_vs_seq_ct_lgf5}). The Jaccard scores are high for the majority of families in which the number of ingroup sequences is between 15-45.
 		
 		\begin{figure}
 			\fbox{\includegraphics[width=\linewidth]{figures/scatter_domain_jaccard_vs_seq_ct_lgf5.png}}
@@ -243,11 +243,11 @@
 			\label{fig:scatter_domain_jaccard_vs_seq_ct_lgf5}
 		\end{figure}
 		
-		The distribution of domain feature based cosine scores was also obtained (Figure ~\ref{fig:hist_domain_cosine_scores_lgf5}). Most of the families have high scores indicating that for majority of the families, the domain compositions are fairly conserved. 
+		The distribution of domain feature based cosine scores was also obtained (Figure ~\ref{fig:hist_domain_cosine_scores_lgf5}). Most of the families have high scores indicating that for a majority of the families, the domain compositions are fairly conserved. 
 		
 		\begin{figure}
 			\fbox{\includegraphics[width=\linewidth]{figures/hist_domain_cosine_scores_lgf5.png}}
-			\caption{Distribution of domain composition based cosine scores for the lgf5 families}
+			\caption{Distribution of domain composition based cosine scores for the Ks-based families}
 			\label{fig:hist_domain_cosine_scores_lgf5}
 		\end{figure}
 		
@@ -267,7 +267,7 @@
 			\label{fig:scatter_domain_cosine_vs_tree_precision_lgf5}
 		\end{figure}
 		
-		Both the domain based family scoring methods have been developed into a PYTHON tool that accepts directory containing family fasta files and the Pfam database, to assign domain composition scores to families.
+		Both the domain based family scoring methods have been developed into a Python tool that accepts the Pfam database and a directory containing family fasta files, and assigns domain composition scores to families.
 	
 	\subsubsection{Significance}
 	Here we explore different domain based family scores mainly to detect over-clustering in families. Assuming that the species under study are closely related, the domain compositions for all the sequences in the family are expected to be largely conserved. The domain feature vector based cosine score seems to correlate better with family size and the tree based precision score as compared to the Jaccard score.
@@ -356,10 +356,9 @@
 		This scoring method can also be used for selecting legtimate ingroup clades while separating/cutting out family clades from over-clustered families detected using the tree based scoring method.
 		
 		
-	\pagebreak
-	
-	\section{Objective 3: Developing workflow for building consensus families from multiple family sets}
-	Family consistency can be assessed by comparing families generated by different family construction methods. This workflow involves comparing the 2 sets of families, obtained from 2 different family building approaches, to establish family correspondences between the 2 sets; which family from one set best corresponds to which family from the second set. Degrees of overlaps between corresponding families, between the two sets, can be used as measure of family consistency.
+	\clearpage
+	\section{Objective 3: Develop a workflow for building consensus families from multiple family sets}
+	Family consistency can be assessed by comparing families generated by different family construction methods. This workflow involves comparing two sets of families, obtained from two different family building approaches, to establish family correspondences between the two sets - that is to determine which family from one set best corresponds to which family from the second set. Degrees of overlaps between corresponding families, between the two sets, can be used as measure of family consistency.
 	
 	The workflow is used to compare set of Ks-based legume families to a set of families obtained from OrthoFinder, to obtain a set of high-quality consensus families. OrthoFinder is one of the latest family building methods that is proven to beat popular family construction methods including OrthoMCL. The two sets are compared through their respective family HMM sets.
 	

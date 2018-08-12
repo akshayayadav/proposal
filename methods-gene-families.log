@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.6)  10 AUG 2018 17:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.6)  12 AUG 2018 18:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -307,12 +307,12 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 92--93
 [][] 
  []
 
-<figures/train_classify2.png, id=28, 1447.4075pt x 850.17625pt>
+<figures/train_classify2.png, id=28, 1449.415pt x 847.165pt>
 File: figures/train_classify2.png Graphic file (type png)
 
 <use figures/train_classify2.png>
 Package pdftex.def Info: figures/train_classify2.png used on input line 98.
-(pdftex.def)             Requested size: 469.75502pt x 275.9278pt.
+(pdftex.def)             Requested size: 469.75502pt x 274.56268pt.
 
 Overfull \hbox (6.79999pt too wide) in paragraph at lines 98--99
 [][] 
@@ -454,16 +454,17 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [13] [14 <./figures/hist_tree_precision_scores_lgf5.png>] [15 <./figures/scatte
 r_tree_precision_vs_seqct_lgf5.png> <./figures/tree_based_quality_type1_L_J5W12
-Z.png>]
+Z.png>] [16 <./figures/tree_based_quality_type2_L_4L11VC.png> <./figures/tree_b
+ased_quality_type3_L_4VWLVV.png>]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 225.
 
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 225.
- [16 <./figures/tree_based_quality_type2_L_4L11VC.png> <./figures/tree_based_qu
-ality_type3_L_4VWLVV.png>]
+
 <figures/hist_domain_jaccard_scores_lgf5.png, id=81, 651.18282pt x 493.845pt>
 File: figures/hist_domain_jaccard_scores_lgf5.png Graphic file (type png)
 
@@ -644,7 +645,7 @@ texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on methods-gene-families.pdf (33 pages, 1257310 bytes).
+Output written on methods-gene-families.pdf (33 pages, 1257866 bytes).
 PDF statistics:
  198 PDF objects out of 1000 (max. 8388607)
  113 compressed objects within 2 object streams

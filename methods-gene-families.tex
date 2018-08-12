@@ -33,7 +33,7 @@
 		Clustering genes into families helps in capturing evolutionary information from multiple species for studying the divergence or conservation of particular biological functions, with respect to given set of species. Gene families can also be used for identification of candidates drug/vaccine development in case of parasites like \textit{Plasmodium falciparum} which causes malaria in humans \citep{gardner2002genome,kissinger2002plasmodium,whetzel2005plasmodb}. Gene families have also been used for annotation of newly sequenced genomes and for anti-bacterial drug development by cross-referencing functional information from multiple species \citep{tatusov1997genomic,galperin1999searching,natale2000towards,natale2000using,forterre2002hot}
 		
 		\subsection{Improving and characterizing gene families}
-		The clusters of Orthologous Groups (COG) database is one of the earliest widely-used collections of gene families \citep{tatusov2000cog,tatusov2001cog}. The orthologous groups in the COG database were identified based on reciprocal best hits from all-against-all BLAST searches using complete proteomes from five major lineages - Gram-negative bacteria, Gram-positive bacteria, Cyanbacteria, Archea, and Eukarya. Existing family building algorithms can be divided into 2 main categories, viz: alignment-based clustering approaches and tree based approaches. The alignment-based clustering approaches either operate on individual pairs of species and then expand to multiple species - for example MultiParanoid (Inparanoid), OMA \citep{alexeyenko2006automatic,remm2001automatic,roth2008algorithm,altenhoff2010oma} - or attempt to infer families directly from multiple species with the common ancestor of given set of species as a reference;  OrthoMCL, OrthoFinder \citep{li2003orthomcl,emms2015orthofinder}. Tree-based methods compare the gene trees with the species trees using tree reconciliation methods for building gene families \citep{li2006treefam,van2007orthology,wapinski2007automatic,hubbard2006ensembl,dehal2006phylogenomic}.
+		 Existing family building algorithms can be divided into 2 main categories, viz: alignment-based clustering approaches and tree based approaches. The clusters of Orthologous Groups (COG) database is one of the earliest widely-used collections of gene families \citep{tatusov2000cog,tatusov2001cog}. The orthologous groups in the COG database were identified based on reciprocal best hits from all-against-all BLAST searches using complete proteomes from five major lineages - Gram-negative bacteria, Gram-positive bacteria, Cyanbacteria, Archea, and Eukarya. The alignment-based clustering approaches either operate on individual pairs of species and then expand to multiple species - for example MultiParanoid (Inparanoid), OMA \citep{alexeyenko2006automatic,remm2001automatic,roth2008algorithm,altenhoff2010oma} - or attempt to infer families directly from multiple species with the common ancestor of given set of species as a reference;  OrthoMCL, OrthoFinder \citep{li2003orthomcl,emms2015orthofinder}. Tree-based methods compare the gene trees with the species trees using tree reconciliation methods for building gene families \citep{li2006treefam,van2007orthology,wapinski2007automatic,hubbard2006ensembl,dehal2006phylogenomic}.
 		  
 		 While many of the families produced by existing methods may be "correct", many non-optimal families could be produced due to under-clustering or over-clustering. Under-clustered families are those families that may have been fragmented by the clustering method (missing sequences). Over-clustered families are those families that may been produced due to merging of two or more closely related families. Also, a significant number of sequences can remain un-clustered and could be wrongly considered as singletons or orphan genes. 
 		
@@ -90,7 +90,7 @@
 			
 			\begin{figure}
 				\fbox{\includegraphics[width=\linewidth]{figures/train_classify1.png}}
-				\caption{Training pair classification models for family}
+				\caption{Training pair classification models for a family}
 				\label{fig:train_classify1}
 			\end{figure}
 			
@@ -114,13 +114,13 @@
 		
 		\begin{figure}
 			\fbox{\includegraphics[width=\linewidth]{figures/hist_pr-auc_true_ygob.png}}
-			\caption{Distribution of PR-AUC values for true YGOB families}
+			\caption{Distribution of PR-AUC values for the true YGOB families}
 			\label{fig:hist_pr-auc_true_ygob}
 		\end{figure}
 		
 		\begin{figure}
 			\fbox{\includegraphics[width=\linewidth]{figures/hist_pr-auc_delete_ygob.png}}
-			\caption{Distribution of PR-AUC values for families with 20\% of sequences deleted}
+			\caption{Distribution of PR-AUC values for the YGOB families with 20\% of sequences deleted}
 			\label{fig:hist_pr-auc_delete_ygob}
 		\end{figure}
 		
@@ -130,7 +130,7 @@
 		
 		\begin{figure}
 			\fbox{\includegraphics[width=\linewidth]{figures/scatter_pr-auc_true_vs_pr-auc_delete_ygob.png}}
-			\caption{Plot of PR-AUCs obtained from true families versus PR-AUCs after deleting 20\% of sequences}
+			\caption{Plot of PR-AUCs obtained from true families versus PR-AUCs after deleting 20\% of sequences, for YGOB families}
 			\label{fig:scatter_pr-auc_true_vs_pr-auc_delete_ygob}
 		\end{figure}
 	
@@ -169,13 +169,13 @@
 		
 		\begin{figure}[h!]
 			\fbox{\includegraphics[width=\linewidth]{figures/hist_tree_precision_scores_lgf5.png}}
-			\caption{Distribution of tree based precision scores for Ks-based families}
+			\caption{Distribution of tree based pair precision scores for the Ks-based legume families}
 			\label{fig:hist_tree_precision_scores_lgf5}
 		\end{figure}
 		
 		\begin{figure}[h!]
 			\fbox{\includegraphics[width=\linewidth]{figures/scatter_tree_precision_vs_seqct_lgf5.png}}
-			\caption{Plot of tree based pair precision scores versus ingroup sequence count for Ks-based families}
+			\caption{Plot of tree based pair precision scores versus ingroup sequence count for the Ks-based legume families}
 			\label{fig:scatter_tree_precision_vs_seqct_lgf5}
 		\end{figure}
 		
@@ -239,7 +239,7 @@
 		
 		\begin{figure}
 			\fbox{\includegraphics[width=\linewidth]{figures/scatter_domain_jaccard_vs_seq_ct_lgf5.png}}
-			\caption{Plot of domain composition based Jaccard score versus ingroup sequence counts for Ks-based legume families}
+			\caption{Plot of domain composition based Jaccard score versus ingroup sequence counts for the Ks-based legume families}
 			\label{fig:scatter_domain_jaccard_vs_seq_ct_lgf5}
 		\end{figure}
 		
@@ -247,7 +247,7 @@
 		
 		\begin{figure}
 			\fbox{\includegraphics[width=\linewidth]{figures/hist_domain_cosine_scores_lgf5.png}}
-			\caption{Distribution of domain composition based cosine scores for the Ks-based families}
+			\caption{Distribution of domain composition based cosine scores for the Ks-based legume families}
 			\label{fig:hist_domain_cosine_scores_lgf5}
 		\end{figure}
 		
@@ -255,7 +255,7 @@
 		
 		\begin{figure}
 			\fbox{\includegraphics[width=\linewidth]{figures/scatter_domain_cosine_vs_seq_ct_lgf5.png}}
-			\caption{Plot of domain composition based cosine scores versus ingroup sequence counts for Ks-based legume families}
+			\caption{Plot of domain composition based cosine scores versus ingroup sequence counts for the Ks-based legume families}
 			\label{fig:scatter_domain_cosine_vs_seq_ct_lgf5}
 		\end{figure}
 		
@@ -263,7 +263,7 @@
 		
 		\begin{figure}
 			\fbox{\includegraphics[width=\linewidth]{figures/scatter_domain_cosine_vs_tree_precision_lgf5.png}}
-			\caption{Plot of domain composition based cosine score versus tree based precision scores for Ks-based legume families}
+			\caption{Plot of domain composition based cosine score versus tree based precision scores for the Ks-based legume families}
 			\label{fig:scatter_domain_cosine_vs_tree_precision_lgf5}
 		\end{figure}
 		
@@ -332,7 +332,7 @@
 				arahy & 4 \\
 				\hline
 			\end{tabular}
-			\caption{Expected gene counts per species per family assuming no gene loss following genome multiplication}
+			\caption{Expected gene counts per species per family, for legume families, assuming no gene loss following genome multiplications}
 			\label{tab:exp_gene_count_table}
 		\end{table}
 		
@@ -343,7 +343,7 @@
 		
 		\begin{figure}[h!]
 			\fbox{\includegraphics[width=\linewidth]{figures/scatter_famsize_vs_species_comp_cosine_score.png}}
-			\caption{Plot of species composition based family scores versus the ingroup sequence counts of Ks-based legume families}
+			\caption{Plot of species composition based family scores versus the ingroup sequence counts of the Ks-based legume families}
 			\label{fig:scatter_famsize_vs_species_comp_cosine_score}
 		\end{figure}
 		
@@ -381,13 +381,13 @@
 		  
 		\begin{figure}[h!]
 			\fbox{\includegraphics[width=\linewidth]{figures/scatter_lgf5_vs_orthofinder_overlap_lgf5.png}}
-			\caption{Plot of the two way overlap scores obtained from comparison between Ks-based and OrthoFinder family sets}
+			\caption{Plot of the two way overlap scores obtained from comparison between the Ks-based and the OrthoFinder family sets}
 			\label{fig:scatter_lgf5_vs_orthofinder_overlap_lgf5}
 		\end{figure}
 		
 		\begin{figure}[h!]
 			\fbox{\includegraphics[width=\linewidth]{figures/hist_seq_ct_lgf5_vs_orthofinder_90percent_overlap.png}}
-			\caption{Distribution of ingroup sequence counts for Ks-based families with both overlaps scores $\geq$ 0.9 }
+			\caption{Distribution of ingroup sequence counts for the Ks-based families with both overlaps scores $\geq$ 0.9 }
 			\label{fig:hist_seq_ct_lgf5_vs_orthofinder_90percent_overlap}
 		\end{figure}
 		
@@ -407,7 +407,7 @@
 		
 		\begin{figure}[h!]
 			\fbox{\includegraphics[width=\linewidth]{figures/hist_lgf5_family_size_groups.png}}
-			\caption{Distribution of ingroup sequence counts for Ks-based families}
+			\caption{Distribution of ingroup sequence counts for the Ks-based families}
 			\label{fig:hist_lgf5_family_size_groups}
 		\end{figure}
 	
